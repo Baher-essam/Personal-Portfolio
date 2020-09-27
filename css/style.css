@@ -60,7 +60,33 @@ header
 }
 /*end of header*/
 
+/*start of about me section*/
+#aboutMe {padding: 6% 0;}
+.about-me-art {text-align: center;}
+#aboutMeData h2 span , .contact-title h1 span 
+{
+    position: relative;
+}
+#aboutMeData h2 span svg , .contact-title h1 span svg
+{
+    position: absolute;
+    top: -4%;
+    left: -21px;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    z-index: -1;
 
+}
+
+.dawnload-cv a
+{
+ background-color: #138AF2;
+ color: #fff;
+}
+/*end of about me section*/
 
 /*respnosive screens (1024 , 768, 425, 375, 320)*/
 /*start of mediaquery*/
