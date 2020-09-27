@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+
+
+/*start of navbar*/
+.navbar-brand {width: 5%;}
+/*end of navbar*/
+
 /*start of header*/
 .header-art {text-align: center;}
 header
@@ -38,3 +44,23 @@ header
     }
 }
 /*end of header*/
+
+
+
+
+/*1024 , 768, 425, 375, 320*/
+/*start of mediaquery*/
+@media only screen and (max-width: 425px) {
+    /*navbar*/
+    .navbar-brand{width: 15%;}
+    /*header*/
+    header
+    {
+        border-radius: 0% 0% 0% 60%;
+        -webkit-border-radius: 0% 0% 0% 60%;
+        -moz-border-radius: 0% 0% 0% 60%;
+        -ms-border-radius: 0% 0% 0% 60%;
+        -o-border-radius: 0% 0% 0% 60%;
+        background-size: 200% 100%;
+    }
+}
