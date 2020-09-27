@@ -182,6 +182,15 @@ header
 /*end of form*/
 /*end of contact us*/
 
+
+/*start of footer*/
+footer
+{
+    background: rgb(90,19,242);
+    background: linear-gradient(218deg, #5a13f2 0%, #c004d9 50%);
+}
+/*end  of footer*/
+
 /*respnosive screens (1024 , 768, 425, 375, 320)*/
 /*start of mediaquery*/
 @media only screen and (max-width: 426px) {
