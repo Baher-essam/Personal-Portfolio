@@ -88,6 +88,15 @@ header
 }
 /*end of about me section*/
 
+/*start of projects*/
+.projects-list li 
+{
+    display: inline;
+    padding: 0 5px;
+    cursor: pointer;
+}
+/*end of projects*/
+
 /*respnosive screens (1024 , 768, 425, 375, 320)*/
 /*start of mediaquery*/
 @media only screen and (max-width: 426px) {
