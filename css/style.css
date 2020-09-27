@@ -3,8 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container-fluid {padding: 0;}
+::selection { background-color:#5A13F2; color:#fff;}
+a , button {color: #fff;}
+/*end of main*/
 
-
+/*start of progress width bar*/
+#progress
+{
+    position: fixed;
+    height: 5px;
+    background: #7b4397;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(218deg, #AB05F2 0%, #138AF2 50%);
+    background: linear-gradient(218deg, #AB05F2 0%, #138AF2 50%);
+    z-index: 9999;
+    border-radius: 0;
+}
+/*end of progress width bar*/
 
 /*start of navbar*/
 .navbar-brand {width: 5%;}
@@ -47,10 +62,9 @@ header
 
 
 
-
-/*1024 , 768, 425, 375, 320*/
+/*respnosive screens (1024 , 768, 425, 375, 320)*/
 /*start of mediaquery*/
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
     /*navbar*/
     .navbar-brand{width: 15%;}
     /*header*/
