@@ -97,6 +97,91 @@ header
 }
 /*end of projects*/
 
+
+/*start of contact us */
+/*start of form*/
+.form .form-group
+{
+    position: relative;
+    overflow: hidden;
+}
+.form  input
+{
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 20px 0 0 0;
+    outline: none;
+}
+
+.form .label-content
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    pointer-events: none;
+    border-bottom: solid 1px #969696;
+    
+}
+.form  .label-content::after
+{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    border-bottom: 2px solid #138AF2;
+    transform: translateX(-101%);
+    -webkit-transform: translateX(-101%);
+    -moz-transform: translateX(-101%);
+    -ms-transform: translateX(-101%);
+    -o-transform: translateX(-101%);
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+.span-data 
+{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.form input:focus + .label-content  .span-data , form input:valid + .label-content  .span-data 
+{
+    transform: translateY(-70%);
+    -webkit-transform: translateY(-70%);
+    -moz-transform: translateY(-70%);
+    -ms-transform: translateY(-70%);
+    -o-transform: translateY(-70%);
+    color:  #138AF2;
+}
+.form input:focus + .label-content::after , form input:valid + .label-content::after 
+{
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+}
+.form input:invalid + .label-content::after 
+{
+    border-bottom: solid 1px red;
+}
+/*end of form*/
+/*end of contact us*/
+
 /*respnosive screens (1024 , 768, 425, 375, 320)*/
 /*start of mediaquery*/
 @media only screen and (max-width: 426px) {
