@@ -3,3 +3,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/*start of header*/
+.header-art {text-align: center;}
+header
+{
+    background: rgb(90,19,242);
+    background: linear-gradient(218deg, #5a13f2 0%, #c004d9 50%);
+    border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
+    -webkit-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
+    -moz-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
+    -ms-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
+    -o-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
+    animation: change 15s infinite ease ;
+    -webkit-animation: change 15s infinite ease ;
+    position: relative;
+    background-size: 150% 100%;
+    padding: 6% 0;
+}
+
+@keyframes change
+{
+    0% 
+    {
+     background-position: 0 50%;
+    }
+    50% 
+    {
+     background-position: 100% 50%;
+    }
+    100% 
+    {
+        background-position: 0 50%;
+    }
+}
+/*end of header*/
