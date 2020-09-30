@@ -94,6 +94,12 @@ header
     display: inline;
     padding: 0 5px;
     cursor: pointer;
+    opacity: 0.4;
+}
+.projects-list li.active
+{
+    opacity: 1;
+    color: #138AF2;
 }
 /*end of projects*/
 
@@ -199,11 +205,11 @@ footer
     /*header*/
     header
     {
-        border-radius: 0% 0% 0% 60%;
-        -webkit-border-radius: 0% 0% 0% 60%;
-        -moz-border-radius: 0% 0% 0% 60%;
-        -ms-border-radius: 0% 0% 0% 60%;
-        -o-border-radius: 0% 0% 0% 60%;
+        border-radius: 0% 0% 0% 60%/0 0 0 40%;
+        -webkit-border-radius: 0% 0% 0% 60%/0 0 0 40%;
+        -moz-border-radius: 0% 0% 0% 60%/0 0 0 40%;
+        -ms-border-radius: 0% 0% 0% 60%/0 0 0 40%;
+        -o-border-radius: 0% 0% 0% 60%/0 0 0 40%;
         background-size: 200% 100%;
-    }
+}
 }
