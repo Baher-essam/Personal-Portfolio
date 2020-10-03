@@ -36,8 +36,8 @@ header
     -moz-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
     -ms-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
     -o-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
-    animation: change 15s infinite ease ;
-    -webkit-animation: change 15s infinite ease ;
+    animation: change 8s infinite ease ;
+    -webkit-animation: change 8s infinite ease ;
     position: relative;
     background-size: 150% 100%;
     padding: 6% 0;
@@ -89,6 +89,18 @@ header
 /*end of about me section*/
 
 /*start of projects*/
+.projects-title h1 {position:relative;}
+.projects-title h1::after
+{
+    content:'P';
+    position: absolute;
+    left : 0;
+    right:0;
+    margin :auto;
+    opacity: 0.1;
+    font-size: 80px;
+    bottom: 0;
+}
 .projects-list li 
 {
     display: inline;
@@ -100,6 +112,27 @@ header
 {
     opacity: 1;
     color: #138AF2;
+}
+.project-img {overflow: hidden;}
+.project-img img
+{
+    transition: transform ease 1.5s;
+    -webkit-transition: transform ease 1.5s;
+    -moz-transition: transform ease 1.5s;
+    -ms-transition: transform ease 1.5s;
+    -o-transition: transform ease 1.5s;
+}
+.project-deatils
+{
+    cursor: pointer;
+}
+.project-deatils:hover .project-img img
+{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 /*end of projects*/
 
