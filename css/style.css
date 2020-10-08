@@ -28,7 +28,7 @@ a , button {color: #fff;}
 {
     position: fixed;
     height: 5px;
-    background: #7b4397;  /* fallback for old browsers */
+    background: #138AF2;  /* fallback for old browsers */
     background: -webkit-linear-gradient(218deg, #AB05F2 0%, #138AF2 50%);
     background: linear-gradient(218deg, #AB05F2 0%, #138AF2 50%);
     z-index: 9999;
@@ -104,6 +104,81 @@ header
  color: #fff;
 }
 /*end of about me section*/
+
+/*start of services*/
+.services .section-title h1::after {content:'S';}
+.services-content 
+{
+    background: #138AF2;
+    /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(218deg, #AB05F2 30%, #138AF2 100%);
+    background:linear-gradient(218deg, #AB05F2 30%, #138AF2 100%);
+    background-size: 150% 100%;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    transition: all ease 0.4s;
+    -webkit-transition: all ease 0.4s;
+    -moz-transition: all ease 0.4s;
+    -ms-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
+    border-radius: 0 25px 0 25px;
+    animation: change1 3s infinite ease ;
+    -webkit-animation: change1 3s infinite ease ;
+}
+@keyframes change1
+{
+    0% 
+    {
+     background-position: 0 50%;
+     
+    }
+    50% 
+    {
+     background-position: 100% 50%;
+    }
+    100% 
+    {
+        background-position: 0 50%;
+    }
+}
+.services-content:hover 
+{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.services-overlay 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 30%);
+    background-color: red;
+    z-index: -1;
+    transition: all 0.5s ease 0.2s;
+    -webkit-transition: all 0.5s ease 0.2s;
+    -moz-transition: all 0.5s ease 0.2s;
+    -ms-transition: all 0.5s ease 0.2s;
+    -o-transition: all 0.5s ease 0.2s;
+    opacity: 0.3;
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+}
+.services-content:hover .services-overlay 
+{
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 65%);
+    opacity: 0.8;
+}
+
+/*end of services*/
 
 /*start of projects*/
 #projects .section-title h1::after {content:'P';}
