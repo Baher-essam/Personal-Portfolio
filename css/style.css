@@ -155,6 +155,7 @@ header
     padding: 20px;
 }
 /*my services conetent*/
+.services .row{overflow: hidden;}
 .services-content::before , .services-content::after
 {
     position: absolute;
