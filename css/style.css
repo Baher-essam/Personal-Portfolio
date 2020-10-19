@@ -38,13 +38,30 @@ a , button {color: #fff;}
 
 /*start of navbar*/
 .navbar-brand {width: 5%;}
+nav{
+    transition: all ease 0.3s ;
+    -webkit-transition: all ease 0.3s ;
+    -moz-transition: all ease 0.3s ;
+    -ms-transition: all ease 0.3s ;
+    -o-transition: all ease 0.3s ;
+}
+nav.scrolled {
+    background-color: #00000085;
+}
+.nav-item.active a
+{
+    color: #4CB1F7 !important;
+    font-weight: 600;
+    border-bottom: solid 1px;
+    border-width: 80%;
+}
 /*end of navbar*/
 
 /*start of header*/
 .header-art {text-align: center;}
 header
 {
-    background: rgb(90,19,242);
+    background: #5a13f2;
     background: linear-gradient(218deg, #5a13f2 0%, #c004d9 50%);
     border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
     -webkit-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
@@ -103,81 +120,139 @@ header
  background-color: #138AF2;
  color: #fff;
 }
+
+.experince-data , .education-data
+{
+    border: solid 1px #000;
+}
+.experince-data-content , .education-data-content
+{
+    border-left: solid 1px #000;
+}
+.experince-data-content  p , .education-data-content p
+{
+    position: relative;
+}
+.experince-data-content p::before , .education-data-content p::before
+{
+    content: '*';
+    position: absolute;
+    top: 15%;
+    left: -9.5%;
+}
 /*end of about me section*/
 
 /*start of services*/
+.services {background-color: #cecece;}
 .services .section-title h1::after {content:'S';}
 .services-content 
 {
-    background: #138AF2;
-    /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(218deg, #AB05F2 30%, #138AF2 100%);
-    background:linear-gradient(218deg, #AB05F2 30%, #138AF2 100%);
-    background-size: 150% 100%;
-    padding: 10px;
     position: relative;
-    z-index: 1;
-    transition: all ease 0.4s;
-    -webkit-transition: all ease 0.4s;
-    -moz-transition: all ease 0.4s;
-    -ms-transition: all ease 0.4s;
-    -o-transition: all ease 0.4s;
-    border-radius: 0 25px 0 25px;
-    animation: change1 3s infinite ease ;
-    -webkit-animation: change1 3s infinite ease ;
+    margin: 10px;
+    background-color: #3a3a3a;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    padding: 20px;
 }
-@keyframes change1
-{
-    0% 
-    {
-     background-position: 0 50%;
-     
-    }
-    50% 
-    {
-     background-position: 100% 50%;
-    }
-    100% 
-    {
-        background-position: 0 50%;
-    }
-}
-.services-content:hover 
-{
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-}
-
-.services-overlay 
+/*my services conetent*/
+.services-content::before , .services-content::after
 {
     position: absolute;
-    top: 0;
+    font-size: 50px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s ease 0.3s;
+    -webkit-transition: all 0.5s ease 0.3s;
+    -moz-transition: all 0.5s ease 0.3s;
+    -ms-transition: all 0.5s ease 0.3s;
+    -o-transition: all 0.5s ease 0.3s;
+}
+.services-content::before 
+{
+    content: 'MY';
+    top: 15px;
+    left: -80px;
+}
+.services-content::after 
+{
+    content: 'SERVICE';
+    bottom: 15px;
+    right: -80px;
+}
+.services-content:hover::before , .services-content:hover::after { opacity: 0.03;}
+.services-content:hover::before  {left: 15px;}
+.services-content:hover::after {right: 15px;}
+/*my services conetent*/
+.services-content h4 
+{
+    letter-spacing: 1px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 100%;
+    transition: 0.5s;
+    transform: translate3d(0, 0, 40px);
+    -webkit-transform: translate3d(0, 0, 40px);
+    -moz-transform: translate3d(0, 0, 40px);
+    -ms-transform: translate3d(0, 0, 40px);
+    -o-transform: translate3d(0, 0, 40px);
+    opacity: .5;
+}
+.services-title p {font-weight: 300; font-size: 14px;}
+.service-img {padding: 3% 0;}
+.service-img-color 
+{
+    position: absolute; 
+    top: 10%;
     left: 0;
     right: 0;
-    bottom: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 30%);
-    background-color: red;
+    margin: 0 auto;
+    width: 85px;
+    height: 85px;
+    background-color: #c004d9;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
     z-index: -1;
-    transition: all 0.5s ease 0.2s;
-    -webkit-transition: all 0.5s ease 0.2s;
-    -moz-transition: all 0.5s ease 0.2s;
-    -ms-transition: all 0.5s ease 0.2s;
-    -o-transition: all 0.5s ease 0.2s;
-    opacity: 0.3;
-    border-radius: inherit;
-    -webkit-border-radius: inherit;
-    -moz-border-radius: inherit;
-    -ms-border-radius: inherit;
-    -o-border-radius: inherit;
 }
-.services-content:hover .services-overlay 
+.services-content:hover
 {
-    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 65%);
-    opacity: 0.8;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
-
+.services-content:hover h4 
+{
+    transform: translate3d(0, 0, 60px);
+    -webkit-transform: translate3d(0, 0, 60px);
+    -moz-transform: translate3d(0, 0, 60px);
+    -ms-transform: translate3d(0, 0, 60px);
+    -o-transform: translate3d(0, 0, 60px);
+    opacity: 1;
+}
+.services-content:hover .service-img-color 
+{
+    top: -17%;
+    width: 115px;
+    height: 115px;
+    background-color: #138AF2;
+}
+.services-content:hover .service-data
+{
+    transform: translate3d(0, 0, 30px);
+    -webkit-transform: translate3d(0, 0, 30px);
+    -moz-transform: translate3d(0, 0, 30px);
+    -ms-transform: translate3d(0, 0, 30px);
+    -o-transform: translate3d(0, 0, 30px);
+}
 /*end of services*/
 
 /*start of projects*/

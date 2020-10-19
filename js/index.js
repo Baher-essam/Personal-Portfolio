@@ -7,6 +7,26 @@ window.addEventListener("scroll" , event => {
 })
 /*end of scrollbar width*/
 
+//start of navbar chnage color on scroll
+$(window).scroll(function(){
+$('nav').toggleClass('scrolled' , $(this).scrollTop()>150);
+})
+//end of navbar chnage color on scroll
+
+//
+window.addEventListener('scroll', () =>{
+
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = window.scrollY;
+  if(Math.ceil(scrollable) === scrolled)
+  {
+    console.log('success');
+    alert('success');
+  }
+
+})
+//
+
 /*AOS libaray initialize function */
 $(function() {
   AOS.init();
@@ -47,3 +67,26 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+
+
+
+  
+VanillaTilt.init(document.querySelectorAll(".service-animate"), {
+  max: 25,
+  speed: 2000,
+  transition: true
+});
+
+
+$(function() {
+  $( ".service-data p" ).hide();
+  $( ".services-content" )
+  .mouseenter(function() {
+    $( ".service-data p" , this ).slideDown(300);
+  })
+  .mouseleave(function() {
+    $( ".service-data p", this  ).slideUp(300);
+  });
+});
+
+
