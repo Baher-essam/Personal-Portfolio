@@ -1,3 +1,10 @@
+:root{
+    --primary-color1: #c004d9;
+    --primary-color2: #AB05F2;
+    --primary-color3: #5A13F2;
+    --primary-color4: #138AF2;
+    --primary-color5: #4CB1F7;
+}
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +12,7 @@
 }
 .container-fluid {padding: 0;}
 ::selection { background-color:#5A13F2; color:#fff;}
-a , button {color: #fff;}
+a , button {color: #fff; text-decoration: none;}
 /*start of all sections title*/
 .section-title h1 {position:relative;}
 /*overlay letter at section title*/
@@ -93,9 +100,39 @@ header
 /*end of header*/
 
 /*start of about me section*/
-#aboutMe {padding: 6% 0;}
+#aboutMe {padding: 6% 0; overflow: hidden; position: relative;}
 #aboutMe .section-title h1::after {content:'A';}
-.about-me-art {text-align: center;}
+.about-me-photo 
+{
+    width: 60%;
+    margin: auto;
+    position: relative;
+}
+.dots
+{
+    position: absolute;
+    margin: auto;
+    z-index: -1;
+    opacity: 0.15;
+    width: 30%;
+}
+.about-me-photo  .dots:nth-child(2) 
+{
+    bottom: -10%;
+    right: -15%;
+}
+.about-me-photo  .dots:nth-child(3) 
+{
+    width: 50%;
+    top: -9%;
+    left: -15%;
+}
+#aboutMe .dots1
+{
+    bottom: 50%;
+    right: -3%;
+    width: 6%;
+}
 #aboutMeData h2 span , .contact-title h1 span 
 {
     position: relative;
@@ -113,13 +150,23 @@ header
     z-index: -1;
 
 }
-.social-data li {display: inline;}
+#aboutMeData p {color: #707070;}
+.social-data li {display: inline; padding:0 1.5%;}
+.social-data li:nth-child(1) {padding: 0;}
 
 .dawnload-cv
 {
- background-color: #138AF2;
  color: #fff;
 }
+.canvas
+{
+    position: relative;
+}
+canvas {
+    position: absolute;
+    left: 0;
+    transform: translate(-10%, -35%);
+  }
 
 .experince-data , .education-data
 {
@@ -143,19 +190,18 @@ header
 /*end of about me section*/
 
 /*start of services*/
-.services {background-color: #cecece;}
+.services {overflow: hidden;}
 .services .section-title h1::after {content:'S';}
 .services-content 
 {
     position: relative;
     margin: 10px;
-    background-color: #3a3a3a;
+    background-color: #000000;
     border-radius: 20px;
     transform-style: preserve-3d;
     padding: 20px;
 }
 /*my services conetent*/
-.services .row{overflow: hidden;}
 .services-content::before , .services-content::after
 {
     position: absolute;
@@ -403,5 +449,9 @@ footer
         -ms-border-radius: 0% 0% 0% 60%/0 0 0 40%;
         -o-border-radius: 0% 0% 0% 60%/0 0 0 40%;
         background-size: 200% 100%;
-}
+    }
+    .about-me-photo 
+    {
+        width: 100%;
+    }
 }

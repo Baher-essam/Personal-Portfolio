@@ -95,14 +95,19 @@
                         <h1>About Me</h1>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-6 col-sm-12">
-                    <div class="about-me-art">
-                        <!-- start of animated svg-->
-                        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_sSF6EG.json" background="transparent" class="m-auto" speed="0.9" style="width: 80%; height: auto;" loop autoplay></lottie-player>
-                        <!-- end of animated svg-->
+                <div class="col-md-6  col-sm-12">
+                    <div class="about-me-photo">
+                        <picture>
+                            <source srcset="images/profile.webp">
+                            <source srcset="images/profile.jpg">
+                            <img src="images/profile.jpg" class="img-fluid" alt="personal photo" >
+                        </picture>
+                        <img src="images/dots.svg" class="dots" alt="">
                     </div>
+                    <div class="about-me-bg"></div>
+                    <div class="about-me-bg1"></div>
                 </div>
-                <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class=" col-md-6 col-sm-12">
                     <div id="aboutMeData" class="text-md-left text-sm-center">
                         <h2>
                             <span><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -190,9 +195,9 @@
                                 </a></li>
                             </ul>
                         <!--dawnload my updated CV-->
-                        <a href="https://drive.google.com/uc?id=1YJmkSRRBrKCu-iVmZ9AQOxGgUdwCAxSX&export=dawnload" class="dawnload-cv">
-                            <button class="btn ">Dawnload CV</button>
-                        </a>
+                        <div class="canvas">
+                            <a  href="https://drive.google.com/uc?id=1YJmkSRRBrKCu-iVmZ9AQOxGgUdwCAxSX&export=dawnload" target="_blank" id="canvas" class=""></a>
+                        </div>
                         </div>
                     </div>
                 </div>
