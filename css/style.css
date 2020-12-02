@@ -158,39 +158,74 @@ header
 {
  color: #fff;
 }
-.canvas
-{
-    position: relative;
-}
-canvas {
-    position: absolute;
-    left: 0;
-    transform: translate(-10%, -35%);
-  }
-
-.experince-data , .education-data
+.education-data
 {
     border: solid 1px #000;
 }
-.experince-data-content , .education-data-content
+.experince-data-content {position: relative;}
+.experince-data-content::after
 {
-    border-left: solid 1px #000;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0 auto;
+    bottom: 0;
+    border-right: solid 2px #000;
 }
-.experince-data-content  p , .education-data-content p
+.experince-year
 {
-    position: relative;
+    background-color: #000000;
+    color: #fff;
+    width: 10%;
+    margin: auto;
 }
-.experince-data-content p::before , .education-data-content p::before
+.experince-data-content .col-md-6{position: relative;}
+.experince-data-content .col-md-6::after
 {
-    content: '*';
+    content: "";
+    position: absolute;
+    top: 20%;
+    padding: 1%;
+    border: solid 2px #000;
+    background-color: #fff;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    z-index: 2;
+}
+.experince-data-content .col-md-6:nth-child(odd)::after {left: -1%;}
+.experince-data-content .col-md-6:nth-child(even)::after {right: -2%;}
+
+.experince-work {position: relative; background-color: red; padding: 1%;}
+.experince-work::before
+{
+    content: "";
     position: absolute;
     top: 15%;
-    left: -9.5%;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    z-index: -1;
 }
+.experince-data-content .col-md-6:nth-child(odd) .experince-work::before {left: -1%;}
+.experince-data-content .col-md-6:nth-child(even) .experince-work::before {right: -1%;}
 /*end of about me section*/
 
 /*start of services*/
-.services {overflow: hidden;}
+.services {
+    overflow: hidden; 
+    background-color: #2a2a2e;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+    padding: 5% 0 10%;
+}
 .services .section-title h1::after {content:'S';}
 .services-content 
 {
@@ -244,7 +279,7 @@ canvas {
     -o-transform: translate3d(0, 0, 40px);
     opacity: .5;
 }
-.services-title p {font-weight: 300; font-size: 14px;}
+.services-title p {font-weight: 300; font-size: 14px; opacity: 0.9;}
 .service-img {padding: 3% 0;}
 .service-img-color 
 {
@@ -419,6 +454,7 @@ canvas {
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
 }
+
 .form input:invalid + .label-content::after 
 {
     border-bottom: solid 1px red;
