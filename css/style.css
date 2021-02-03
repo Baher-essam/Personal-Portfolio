@@ -3,19 +3,22 @@
     --primary-color1: #c004d9;
     --primary-color2: #AB05F2;
     --primary-color3: #5A13F2;
-    --primary-color4: #138AF2;
+    --primary-color4: #128af3;
     --primary-color5: #4CB1F7;
+    --primary-color6: #e265ae;
     /*background colors*/
+    --intro-bg-color : #1c2431;
     --main-bg-color : #181f2a;
     --footer-bg-color : #0b1523;
     --testimonials-bg-color : #202a3c;
-    --intro-bg-color : #1c2431;
     --form-bg-color:#1b2330;
+    --btn-bg-color:#128af3;
+    --btn-bg-color1:#4CB1F7;
     /*color*/
     --font-color: #ffffff;
     --Cyan :#65e2d9;
     --blue: #339ecc;
-    --light-red:hsl(0, 100%, 63%);
+    --light-red:#ff4242;
     --gray-light: #aaacaf;
 }
 ::selection { background-color:#5A13F2; color:#fff;}
@@ -25,9 +28,7 @@
     box-sizing: border-box;
 }
 a , button {color: #fff; text-decoration: none;}
-main {
-    background-color: var(--main-bg-color);
-}
+body {background-color: var(--main-bg-color);}
 .container-fluid {padding: 0;}
 
 /*start of all sections title*/
@@ -82,23 +83,33 @@ nav.scrolled {
 /*end of navbar*/
 
 /*start of intro*/
-.intro-art {text-align: center;}
 .intro
 {
-    background: #5a13f2;
-    background: linear-gradient(218deg, #5a13f2 0%, #c004d9 50%);
+    background: #1c2431;
+    background: linear-gradient(45deg, #c004d965 0%, #1c2431 40%);
     border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
     -webkit-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
     -moz-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
     -ms-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
     -o-border-radius: 0% 0% 0% 100%/150% 0% 0% 150%;
-    animation: change 8s infinite ease ;
-    -webkit-animation: change 8s infinite ease ;
+    animation: change  10s infinite ease ;
+    -webkit-animation: change  10s infinite ease ;
     position: relative;
-    background-size: 150% 100%;
-    padding: 6% 0;
+    background-size: 130% 100%;
+    padding: 5% 0;
+    filter: drop-shadow(-35px -10px 25px #c004d977);
+    -webkit-filter: drop-shadow(-35px -10px 25px #c004d977);
 }
+.intro > *
+{
+    filter: drop-shadow(10px 10px 25px #e265ae62);
+    -webkit-filter: drop-shadow(10px 10px 25px #e265ae62);
+}
+.intro h1 span:nth-child(2) , .intro h1 span:nth-child(3)
+{
+    color: var(--primary-color6);
 
+}
 @keyframes change
 {
     0% 
@@ -114,6 +125,40 @@ nav.scrolled {
         background-position: 0 50%;
     }
 }
+.intro-art {text-align: center;}
+.intro-text a 
+{
+    background-color: var(--btn-bg-color);
+    background: linear-gradient(90deg, #4CB1F7 0%, #138AF2 40%);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: all ease-in 0.8s;
+    -webkit-transition: all ease-in 0.8s;
+    -moz-transition: all ease-in 0.8s;
+    -ms-transition: all ease-in 0.8s;
+    -o-transition: all ease-in 0.8s;
+}
+.intro-text a:hover
+{
+    background: linear-gradient(270deg, #4CB1F7 0%, #138AF2 40%);
+    text-decoration: none;
+    color: #fff;
+}
+/**/
+.intro-content
+{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-auto-rows: minmax(100px , auto);
+    grid-gap: 20px;
+    align-items: center;
+    padding: 5% 0;
+}
+.intro-content  h1 {font-size: calc(2.5rem + 1vw)}
+.intro-content > div {padding: 5% 0;}
 /*end of intro*/
 
 /*start of about me section*/
@@ -564,19 +609,29 @@ footer
 
 /*respnosive screens (1024 , 768, 425, 375, 320)*/
 /*start of mediaquery*/
-@media only screen and (max-width: 426px) {
+@media  screen and (max-width: 601px) {
     /*navbar*/
     .navbar-brand{width: 15%;}
-    /*intro*/
+    /*start ofintro*/
     .intro
     {
-        border-radius: 0% 0% 0% 60%/0 0 0 40%;
-        -webkit-border-radius: 0% 0% 0% 60%/0 0 0 40%;
-        -moz-border-radius: 0% 0% 0% 60%/0 0 0 40%;
-        -ms-border-radius: 0% 0% 0% 60%/0 0 0 40%;
-        -o-border-radius: 0% 0% 0% 60%/0 0 0 40%;
+        border-radius: 0% 0% 0% 40%/0 0 0 20%;
+        -webkit-border-radius: 0% 0% 0% 40%/0 0 0 20%;
+        -moz-border-radius: 0% 0% 0% 40%/0 0 0 20%;
+        -ms-border-radius: 0% 0% 0% 40%/0 0 0 20%;
+        -o-border-radius: 0% 0% 0% 40%/0 0 0 20%;
         background-size: 200% 100%;
+        padding: 15% 0;
     }
+    .intro-content {grid-template-columns: repeat(1 , 1fr);}
+    .lottie-player {width: 90% !important;}
+    .intro-content > div:nth-child(1)
+    {
+        text-align: center;
+        grid-row: 2/3;
+    }
+    .intro-content > div:nth-child(2) { grid-row: 1/2;}
+    /*end of intro*/
     .about-me-photo 
     {
         width: 100%;
@@ -591,4 +646,11 @@ footer
     .experince-data-content .col-12:nth-child(odd) .experince-time ,   .experince-data-content .col-12:nth-child(even) .experince-time
 {left: 15%; right: auto; top: -12%; padding: 5px 35px;}
 
+}
+
+@media  screen and (max-width: 391px) {
+    .intro-content h1 
+    {
+       
+    }
 }
