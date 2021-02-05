@@ -104,3 +104,13 @@ $(function() {
   $( ".dots" ).clone().appendTo( ".about-me-photo" );
   $( ".dots").first().clone().appendTo("#aboutMe").addClass('dots1');
 });
+
+
+//loader
+
+$(window).on('load', function () {
+
+
+  $('sk-cube-grid').fadeOut(1000);
+  $('.loader').addClass('test');
+});
