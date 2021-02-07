@@ -604,10 +604,8 @@ nav.scrolled {
 
 
 /*start of footer*/
-footer
-{
-    background: var(--footer-bg-color);
-}
+footer {background: var(--footer-bg-color);}
+footer p span:last-child {color: var(--primary-color4);}
 /*end  of footer*/
 /* .loader
 {
@@ -779,4 +777,6 @@ footer
         width: 30px!important;
         height: 30px!important;
     }
+    footer svg {width: 15px!important; height: 15px!important;}
+    footer p {font-size: 12px;}
 }
