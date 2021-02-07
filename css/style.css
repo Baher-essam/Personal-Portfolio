@@ -21,7 +21,6 @@
     --light-red:#ff4242;
     --gray-light: #aaacaf;
     --white:#fff;
-    --r: 1.5em;
 }
 ::selection { background-color:#5A13F2; color:#fff;}
 *{
@@ -362,16 +361,17 @@ nav.scrolled {
 /*start of services*/
 .services {
     overflow: hidden; 
-    background-color: #f1f1f1;
-    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
-    padding: 5% 0 10%;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+    background-color: var(--testimonials-bg-color);
+    padding: 10% 0;
+    position: relative;
 }
 .services .section-title h1::after {content:'S';}
 .services-content 
 {
     position: relative;
     margin: 10px;
-    background-color: #000000;
+    background-color: var(--footer-bg-color);
     border-radius: 20px;
     transform-style: preserve-3d;
     padding: 20px;
@@ -762,6 +762,9 @@ footer
     bottom: 15%;
     width: 20%;
 }
+ .services{  
+     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    }
 
 }
 
