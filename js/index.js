@@ -25,7 +25,6 @@ function endSite(){
   if(Math.ceil(scrollable) === scrolled)
   {
     console.log('success');
-    alert('success');
   }
 };
 
