@@ -621,6 +621,7 @@ nav button:focus {outline: none;}
     height: 250px;
     width: 100%;
 }
+
 .project-deatils {cursor: pointer;}
 .project-deatils:hover .project-img img
 {
