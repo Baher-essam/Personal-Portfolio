@@ -55,7 +55,7 @@ body {background-color: var(--main-bg-color);}
 .container-fluid {padding: 0;}
 
 /*start of all sections title*/
-.section-title h1 {position:relative;}
+.section-title h1 {position:relative; color: var(--white);}
 /*overlay letter at section title*/
 .section-title h1::after
 {
@@ -519,6 +519,40 @@ nav.scrolled {
 /*start of contact us */
 /*start of form*/
 #contact .section-title h1::after {content: 'F';}
+.contact-form {
+    background-color: var(--form-bg-color);
+    padding: 5%;
+    width: 60%;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 0 35px #c004d977;
+}
+button.main-btn
+{
+    outline: none;
+    border: 0;
+}
+input , input.form-control ,input:focus,input:-internal-autofill-selected , input.form-control:focus ,textarea , textarea.form-control ,textarea:focus , textarea.form-control:focus
+{
+    background-color: transparent !important;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    color: var(--white)
+}
+textarea , textarea.form-control 
+{
+ border: 0;
+ border-left: 1px solid #ced4da;
+ border-bottom: 1px solid #ced4da;
+
+}
 .form .form-group
 {
     position: relative;
@@ -543,6 +577,7 @@ nav.scrolled {
     margin: 0;
     pointer-events: none;
     border-bottom: solid 1px #969696;
+    color: var(--gray-light);
     
 }
 .form  .label-content::after
@@ -597,7 +632,7 @@ nav.scrolled {
 
 .form input:invalid + .label-content::after 
 {
-    border-bottom: solid 1px red;
+    border-bottom: solid 1px var(--light-red);
 }
 /*end of form*/
 /*end of contact us*/
