@@ -142,7 +142,7 @@ header .bg1
     }
     50%
     {
-        box-shadow:  0px 20px 45px #ab05f2;
+        box-shadow:  0px 20px 40px #ab05f2;
     }
     0%
     {
@@ -648,6 +648,22 @@ nav button:focus {outline: none;}
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     box-shadow: 0 0 35px #c004d977;
+    animation:  contact-animation 5s infinite ease-in;
+    -webkit-animation:  contact-animation 5s infinite ease-in;
+}
+@keyframes contact-animation {
+    0%
+    {
+        box-shadow: 0 0 35px #c004d977;
+    }
+    50%
+    {
+        box-shadow: 0 0 50px #c004d977;
+    }
+    0%
+    {
+        box-shadow: 0 0 35px #c004d977;
+    }
 }
 button.main-btn
 {
