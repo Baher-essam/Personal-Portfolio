@@ -153,3 +153,9 @@ $('.navbar-toggler').click(function () {
   $('.collapse-group').toggleClass('active');
   $('.bg').toggleClass('active');
 });
+//navbar small screen toggle links
+$('.nav-item').click(function () {
+  $('.collapse-group').toggleClass('active');
+  $('.bg').toggleClass('active');
+  $('.navbar-collapse').toggleClass('show');
+});
