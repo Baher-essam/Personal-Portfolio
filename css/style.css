@@ -39,7 +39,8 @@
     --services-bg-color: #dfdfdf;
     --footer-bg-color: #a5a5a5;
     --form-bg-color:#cfcfcf;
-    /*filters*/--fliter:invert(0);
+    /*filters*/
+    --fliter:invert(0);
     --refliter:invert(1);
 }
 .lightMode.time
@@ -794,8 +795,8 @@ nav button:focus {outline: none;}
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     box-shadow: 0 0 35px var(---box-shadow-color1);
-    animation:  contact-animation 5s infinite ease-in;
-    -webkit-animation:  contact-animation 5s infinite ease-in;
+    animation:  contact-animation 5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    -webkit-animation:  contact-animation 5s infinite cubic-bezier(0, 0, 0.50, 0.50);
 }
 @keyframes contact-animation {
     0%
@@ -915,6 +916,31 @@ form .message {  color: var(--gray-light);}
     border-bottom: solid 1px var(--light-red);
 }
 /*end of form*/
+/*popup submition*/
+#sendMessage{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    margin: auto;
+    color: var(--white);
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    background-color: var(--footer-bg-color);
+    box-shadow: 0 0 35px var(---box-shadow-color1);
+    animation:  contact-animation 5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    -webkit-animation:  contact-animation 5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: none;
+}
 /*end of contact us*/
 
 
@@ -1030,7 +1056,7 @@ footer p span:last-child {color: var(--primary-color4);}
         margin: auto;
     }
 }
-@media screen and (max-width:767px)
+@media screen and (max-width:769px)
 {
     /*about me*/
     #aboutMe .dots1 {
@@ -1038,6 +1064,7 @@ footer p span:last-child {color: var(--primary-color4);}
         right: 20%;
         width: 15%;
     }
+    #sendMessage {width: 80%;}
 }
 @media  screen and (max-width: 601px) {
     /*navbar*/
