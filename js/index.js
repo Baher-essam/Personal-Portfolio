@@ -147,7 +147,6 @@ $(document).scroll(function() {
 });
 
 //navbar small screen toggle btn
-
 $('.navbar-toggler').click(function () {
 
   $('.collapse-group').toggleClass('active');
@@ -158,4 +157,50 @@ $('.nav-item').click(function () {
   $('.collapse-group').toggleClass('active');
   $('.bg').toggleClass('active');
   $('.navbar-collapse').toggleClass('show');
+});
+
+//light mode with local storage
+let lightMode = localStorage.getItem('lightMode');
+const lightModeToggle = document.querySelector('#lightModeToggle');
+
+const enableLightMode = () =>{
+// add the class lightmode to the body
+$('body').addClass('lightMode');
+$('#lightModeToggle').removeClass('disabled');
+$('#lightModeToggle').addClass('enabled');
+$('nav').removeClass('navbar-dark');
+$('nav').addClass('navbar-light');
+//update lightmode at the local storage
+localStorage.setItem('lightMode', 'enabled');
+
+}
+
+const disableLightMode = () =>{
+  // remove the class lightmode to the body
+  $('body').removeClass('lightMode');
+  $('#lightModeToggle').removeClass('enabled');
+  $('#lightModeToggle').addClass('disabled');
+  $('nav').addClass('navbar-dark');
+  $('nav').removeClass('navbar-light');
+  //update lightmode at the local storage
+  localStorage.setItem('lightMode', 'disabled');
+}
+
+//for remembering what was saved last time
+  if ( lightMode === 'enabled')
+    enableLightMode();
+
+
+lightModeToggle.addEventListener("click", () => {
+  lightMode = localStorage.getItem('lightMode');
+  if (lightMode !== 'enabled')
+  {
+    enableLightMode();
+    $('body').addClass('time');
+  }
+  else
+  {
+    disableLightMode();
+    $('body').removeClass('time');
+  }
 });

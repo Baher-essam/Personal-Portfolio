@@ -16,9 +16,19 @@
    <link rel="stylesheet" href="css/style.css">
     <title>Baher Essam</title>
 </head>
-<body>
+<body class="">
     <!--start of width scroll-->
     <div id="progress"></div>
+    <div id="lightModeToggle">
+        <div class="lightModeRotate">
+            <div class="moon">
+                <img src="images/moon.svg" class="img-fluid" alt="moon">
+            </div>
+            <div class="sun">
+                <img src="images/sun.svg" class="img-fluid" alt="sun">
+            </div>
+        </div>
+    </div>
     <!--end of width scroll-->
     <!--start of loader-->
     <div class="loader">
@@ -37,7 +47,6 @@
 
     <!-- start of header-->
     <header id="Home">
-      
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
         <!-- start of navbar-->
@@ -47,7 +56,7 @@
                     <picture>
                         <source srcset="images/logo.webp" type="">
                         <source srcset="images/logo.png">
-                        <img src="images/logo.png" alt="Baher Essam logo" class="img-fluid">
+                        <img src="images/logo.png" alt="logo" class="img-fluid">
                     </picture>
                 </a>
                 <button class="navbar-toggler border-0 d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -96,7 +105,7 @@
                 <div class="intro-content">
                     <div class="intro-text text-white" data-aos="fade-down">
                         <h1> <span>Hi,</span>I'm <span>B</span>aher <span>E</span>ssam</h1>
-                        <p>I'm a Web developer / Designer</p>
+                        <p>I'm a Web Developer</p>
                         <a href="#aboutMe" class="text-capitalize px50 main-btn mt10 py5">know more</a>
                     </div>
                     <div class="intro-art text-center" data-aos="fade-down">
@@ -483,7 +492,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 project ui-ux "> 
-                        <a href="#!">
+                        <a href="https://www.behance.net/gallery/90820417/Bezell" target="_blank">
                             <div class="project-deatils">
                                 <div class="project-img">
                                     <picture>
@@ -541,7 +550,7 @@
                     </div>
               
                     <div class="col-sm-12">
-                        <div class="contact-form text-center mt50">
+                        <div class="contact-form  mt50">
                             <form class="form" id="myForm" action="index.html"  method="POST"  data-netlify="true" name="contact" netlify-honeypot="bot-field">
                                 <input type="hidden" name="form-name" value="contact">
                                 <div class="form-group">
@@ -563,10 +572,12 @@
                                     </label>
                                 </div>
                                 <div class="form-group">
-                                <label for="message">Message</label>
+                                <label for="message" class="message">Message</label>
                                 <textarea name="message" rows="4" placeholder="Enter Message..." class="form-control"></textarea>
                                 </div>
-                                <button type="submit" class="text-capitalize px60 main-btn mt10 py5" data-toggle="modal" data-target="#sendMessage">Send Message</button>
+                                <div class="text-center">
+                                    <button type="submit" class="text-capitalize px60 main-btn mt10 py5" data-toggle="modal" data-target="#sendMessage">Send Message</button>
+                                </div>
                             </form> 
                         </div>
                     </div>
