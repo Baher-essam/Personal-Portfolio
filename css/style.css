@@ -39,7 +39,8 @@
     --services-bg-color: #dfdfdf;
     --footer-bg-color: #a5a5a5;
     --form-bg-color:#cfcfcf;
-    /*filters*/--fliter:invert(0);
+    /*filters*/
+    --fliter:invert(0);
     --refliter:invert(1);
 }
 .lightMode.time
@@ -794,8 +795,8 @@ nav button:focus {outline: none;}
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     box-shadow: 0 0 35px var(---box-shadow-color1);
-    animation:  contact-animation 5s infinite ease-in;
-    -webkit-animation:  contact-animation 5s infinite ease-in;
+    animation:  contact-animation 5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    -webkit-animation:  contact-animation 5s infinite cubic-bezier(0, 0, 0.50, 0.50);
 }
 @keyframes contact-animation {
     0%
@@ -917,11 +918,13 @@ form .message {  color: var(--gray-light);}
 /*end of form*/
 /*end of contact us*/
 
-
 /*start of footer*/
 footer {background: var(--footer-bg-color);}
 footer p span:last-child {color: var(--primary-color4);}
 /*end  of footer*/
+
+/*end of thankyou page*/
+
 /* .loader
 {
     position: fixed;
@@ -1030,7 +1033,7 @@ footer p span:last-child {color: var(--primary-color4);}
         margin: auto;
     }
 }
-@media screen and (max-width:767px)
+@media screen and (max-width:769px)
 {
     /*about me*/
     #aboutMe .dots1 {
