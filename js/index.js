@@ -204,29 +204,3 @@ lightModeToggle.addEventListener("click", () => {
     $('body').removeClass('time');
   }
 });
-
-
-
-//form submit popup 
-// jQuery('#myForm').on('submit', function(event){
-//   event.preventDefault();
-//   jQuery.ajax({
-//      type : 'POST',
-//      data : jQuery('#myForm').serialize(),
-//      beforeSend: function(){
-//      jQuery("#error").fadeOut();
-//   },
-//      success :  function(response){
-//        var left_position = $("body").width()/2 - $("#sendMessage").width()/2;
-//        $("#sendMessage").fadeIn("slow");
-//      }
-//   });
-// });
-
-$( "#myForm" ).submit(function( event ) {
-  event.preventDefault();
-  $('#sendMessage').fadeIn(500);
-});
-$('#popupClose').click(function () {
-  $('#sendMessage').fadeOut(500);
-})
