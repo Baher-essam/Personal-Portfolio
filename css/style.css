@@ -30,7 +30,7 @@
     --refliter:invert(0);
  
 }
-/*start of dark mode*/
+/*start of light mode*/
 .lightMode{
     /*color*/--white:#000;
     /*backgroundcolors*/--navbar-bg: #00000030;
@@ -290,7 +290,7 @@ header .bg1
     {
         box-shadow:  0px 20px 40px #ab05f2;
     }
-    0%
+    100%
     {
         box-shadow:  0px 15px 33px #ab05f2;
     }
@@ -794,22 +794,22 @@ nav button:focus {outline: none;}
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    box-shadow: 0 0 35px var(---box-shadow-color1);
+    box-shadow: 0 0 35px var(--box-shadow-color1);
     animation:  contact-animation 5s infinite cubic-bezier(0, 0, 0.50, 0.50);
     -webkit-animation:  contact-animation 5s infinite cubic-bezier(0, 0, 0.50, 0.50);
 }
 @keyframes contact-animation {
     0%
     {
-        box-shadow: 0 0 35px var(---box-shadow-color1);
+        box-shadow: 0 0 35px var(--box-shadow-color1);
     }
     50%
     {
-        box-shadow: 0 0 50px var(---box-shadow-color1);
+        box-shadow: 0 0 50px var(--box-shadow-color1);
     }
-    0%
+    100%
     {
-        box-shadow: 0 0 35px var(---box-shadow-color1);
+        box-shadow: 0 0 35px var(--box-shadow-color1);
     }
 }
 button.main-btn
@@ -922,8 +922,6 @@ form .message {  color: var(--gray-light);}
 footer {background: var(--footer-bg-color);}
 footer p span:last-child {color: var(--primary-color4);}
 /*end  of footer*/
-
-/*end of thankyou page*/
 
 /* .loader
 {
