@@ -1,5 +1,6 @@
 @import url(spaces.min.css);
 :root{
+    /*color*/
     --primary-color1: #c004d9;
     --primary-color2: #AB05F2;
     --primary-color3: #5A13F2;
@@ -7,29 +8,173 @@
     --primary-color5: #4CB1F7;
     --primary-color6: #e265ae;
     --primary-color7: #138AF2;
-    /*background colors*/
-    --intro-bg-color : #1c2431;
-    --main-bg-color : #181f2a;
-    --footer-bg-color : #0b1523;
-    --testimonials-bg-color : #202a3c;
-    --form-bg-color:#1b2330;
-    --btn-bg-color:#128af3;
-    --btn-bg-color1:#4CB1F7;
-    /*color*/
     --Cyan :#65e2d9;
     --blue: #339ecc;
     --light-red:#ff4242;
     --gray-light: #aaacaf;
     --white:#fff;
+    --black:#000;
+    /*background colors*/
+    --navbar-bg: #ffffff30;
+    --main-bg-color: #181f2a;
+    --intro-bg-color: #1c2431;
+    --services-bg-color: #202a3c;
+    --form-bg-color:#1b2330;
+    --footer-bg-color: #0b1523;
+
+    --btn-bg-color:#128af3;
+    --btn-bg-color1:#4CB1F7;
+    --box-shadow-color1: #c004d977;
+    /*filters*/
+    --fliter:invert(1);
+    --refliter:invert(0);
+ 
 }
-::selection { background-color:#5A13F2; color:var(--white);}
-html{scroll-behavior: smooth;}
+/*start of dark mode*/
+.lightMode{
+    /*color*/--white:#000;
+    /*backgroundcolors*/--navbar-bg: #00000030;
+    --main-bg-color: #f8f8f8;
+    --intro-bg-color: #f0f0f0;
+    --services-bg-color: #dfdfdf;
+    --footer-bg-color: #a5a5a5;
+    --form-bg-color:#cfcfcf;
+    /*filters*/--fliter:invert(0);
+    --refliter:invert(1);
+}
+.lightMode.time
+{
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+}
+.lightMode .text-white {color: #000 !important;}
+#lightModeToggle
+{
+    position: fixed;
+    top: 25%;
+    left: -15px;
+    width: 35px;
+    z-index: 9;
+    cursor: pointer;
+    background-color: var(--black);
+    border-radius: 20px;
+    overflow: hidden;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    box-shadow: 0 0 15px var(--box-shadow-color1);
+    animation: lightMode 2s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    -webkit-animation: lightMode 2s infinite cubic-bezier(0, 0, 0.50, 0.50);
+}
+@keyframes lightMode {
+    0%
+    {
+        box-shadow: 0 0 15px var(--box-shadow-color1);
+    }
+    50%
+    {
+        box-shadow: 0 0 25px var(--box-shadow-color1);
+    }
+    100%
+    {
+        box-shadow: 0 0 15px var(--box-shadow-color1);
+    }
+}
+#lightModeToggle .lightModeRotate
+{
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+}
+#lightModeToggle div.moon , #lightModeToggle div.sun
+{
+    padding: 15%;
+    margin: 5%;
+    transition: all ease-in-out 0.2s;
+    -webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    -ms-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
+}
+#lightModeToggle img {
+    animation: lightModeIconRotate 15s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    -webkit-animation: lightModeIconRotate 15s infinite cubic-bezier(0, 0, 0.50, 0.50);
+}
+@keyframes lightModeIconRotate {
+    0%
+    {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    50%
+    {
+           transform: rotate(180deg);
+           -webkit-transform: rotate(180deg);
+           -moz-transform: rotate(180deg);
+           -ms-transform: rotate(180deg);
+           -o-transform: rotate(180deg);
+    }
+    75%
+    {
+           transform: rotate(270deg);
+           -webkit-transform: rotate(270deg);
+           -moz-transform: rotate(270deg);
+           -ms-transform: rotate(270deg);
+           -o-transform: rotate(270deg);
+    }
+    100%
+    {
+           transform: rotate(360deg);
+           -webkit-transform: rotate(360deg);
+           -moz-transform: rotate(360deg);
+           -ms-transform: rotate(360deg);
+           -o-transform: rotate(360deg);
+    }
+}
+#lightModeToggle.disabled .lightModeRotate
+{
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+#lightModeToggle.enabled .lightModeRotate
+{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+#lightModeToggle.enabled div.moon:nth-child(1) ,#lightModeToggle.disabled  div.sun:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+/*end of dark mode*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+::selection { background-color:#5A13F2; color:var(--white);}
+html{scroll-behavior: smooth;}
 a , button {color: var(--white); text-decoration: none;}
+
 /*intro, aboutme*/
 .main-btn{
     background-color: var(--btn-bg-color);
@@ -132,8 +277,8 @@ header .bg1
     background-color: #9704d6;
     transition-delay: 0.1s;
     box-shadow:  0px 15px 33px #ab05f2;
-    animation: boxanimation 2s  infinite ;
-    -webkit-animation: boxanimation 2s  infinite ;
+    animation: boxanimation 2s  infinite cubic-bezier(0, 0, 0.50, 0.50);
+    -webkit-animation: boxanimation 2s  infinite cubic-bezier(0, 0, 0.50, 0.50);
 }
 @keyframes boxanimation {
     0%
@@ -142,7 +287,7 @@ header .bg1
     }
     50%
     {
-        box-shadow:  0px 20px 45px #ab05f2;
+        box-shadow:  0px 20px 40px #ab05f2;
     }
     0%
     {
@@ -168,7 +313,11 @@ nav{
     -ms-transition: all ease 0.3s ;
     -o-transition: all ease 0.3s ;
 }
-nav.scrolled { background-color: #00000069;}
+nav img {
+    filter:var(--refliter);
+    -webkit-filter:var(--refliter);
+}
+nav.scrolled { background-color: var(--navbar-bg);}
 .nav-item.active a
 {
     opacity: 0.4;
@@ -232,6 +381,7 @@ nav button:focus {outline: none;}
 /*end of navbar*/
 
 /*start of intro*/
+
 .intro
 {
     background: var( --intro-bg-color );
@@ -294,8 +444,8 @@ nav button:focus {outline: none;}
     z-index: -1;
     opacity: 0.15;
     width: 30%;
-    filter: invert(1);
-    -webkit-filter: invert(1);
+    filter:var(--fliter);
+    -webkit-filter:var(--fliter);
 }
 .about-me-photo  .dots:nth-child(2) 
 {
@@ -329,10 +479,7 @@ nav button:focus {outline: none;}
 }
 #aboutMeData p ,#aboutMeData  social a{color: var(--gray-light);}
 #aboutMeData li { color: var(--white); }
-#aboutMeData li svg 
-{
-    fill:var(--white);
-}
+#aboutMeData li svg  , #aboutMeData li svg path{fill:var(--white);}
 #aboutMeData a:hover { text-decoration: none;}
 .social-data li {display: inline; padding:0 1.5%;}
 .social-data li:nth-child(1) {padding: 0;}
@@ -478,7 +625,7 @@ nav button:focus {outline: none;}
 .services {
     overflow: hidden; 
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-    background-color: var(--testimonials-bg-color);
+    background-color: var(--services-bg-color);
     padding: 10% 0;
     position: relative;
 }
@@ -635,7 +782,6 @@ nav button:focus {outline: none;}
 
 
 /*start of contact us */
-/*start of form*/
 #contact .section-title h1::after {content: 'F';}
 .contact-form {
     background-color: var(--form-bg-color);
@@ -647,7 +793,23 @@ nav button:focus {outline: none;}
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    box-shadow: 0 0 35px #c004d977;
+    box-shadow: 0 0 35px var(---box-shadow-color1);
+    animation:  contact-animation 5s infinite ease-in;
+    -webkit-animation:  contact-animation 5s infinite ease-in;
+}
+@keyframes contact-animation {
+    0%
+    {
+        box-shadow: 0 0 35px var(---box-shadow-color1);
+    }
+    50%
+    {
+        box-shadow: 0 0 50px var(---box-shadow-color1);
+    }
+    0%
+    {
+        box-shadow: 0 0 35px var(---box-shadow-color1);
+    }
 }
 button.main-btn
 {
@@ -696,8 +858,8 @@ textarea , textarea.form-control
     pointer-events: none;
     border-bottom: solid 1px #969696;
     color: var(--gray-light);
-    
 }
+form .message {  color: var(--gray-light);}
 .form  .label-content::after
 {
     content: "";
@@ -857,7 +1019,6 @@ footer p span:last-child {color: var(--primary-color4);}
               transform: scale3D(0, 0, 1);
     } 
   } */
-/*respnosive screens (1024 , 768, 425, 375, 320)*/
 /*start of mediaquery*/
 @media screen and (max-width:991px)
 {
