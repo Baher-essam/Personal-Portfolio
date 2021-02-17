@@ -20,7 +20,7 @@
             align-items: center;
             height: 100vh;
         }
-        lottie-player {width: 70%; height: auto; margin: auto;}
+        img {width: 70%; height: auto; margin: auto;}
         #sendMessage{
             text-align: center;
             padding: 10px;
@@ -30,11 +30,12 @@
 </head>
 <body class="thankyou">
     <div id="sendMessage">
-        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_IUWMcw.json"  background="transparent"  speed="0.8"  loop  autoplay></lottie-player>
+        <div class="">
+            <img src="images/messagesent.svg" alt="">
+        </div>
         <h3>Message sent</h3>
         <p class="mt20">Your message have been sent, we well be in touch as soon as possible</p>
     </div>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
         setTimeout(function(){
             window.location.href = '/';
