@@ -691,11 +691,12 @@ nav button:focus {outline: none;}
 }
 .services-title p {font-weight: 300; font-size: 14px; opacity: 0.9;}
 .service-img {padding: 3% 0;}
-.service-img-color 
+.service-img
 {
-    position: absolute; 
-    top: -20%;
+    position: relative; 
+    top: -30px;
     left: 0;
+    padding: 0;
     right: 0;
     margin: 0 auto;
     width: 60%;
@@ -721,15 +722,15 @@ nav button:focus {outline: none;}
     -o-transform: translate3d(0, 0, 60px);
     opacity: 1;
 }
-.services-content:hover .service-img-color 
+.services-content:hover .service-img
 {
-    top: -25%;
+    top: -35px;
     width: 65%;
-    transform: translate3d(0, -20px, 50px);
-    -webkit-transform: translate3d(0, -20px, 50px);
-    -moz-transform: translate3d(0, -20px, 50px);
-    -ms-transform: translate3d(0, -20px, 50px);
-    -o-transform: translate3d(0, -20px, 50px);
+    transform: translate3d(0, -30px, 50px);
+    -webkit-transform: translate3d(0, -30px, 50px);
+    -moz-transform: translate3d(0, -30px, 50px);
+    -ms-transform: translate3d(0, -30px, 50px);
+    -o-transform: translate3d(0, -30px, 50px);
 }
 .services-content:hover .service-data
 {
