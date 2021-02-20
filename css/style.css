@@ -407,7 +407,7 @@ nav button:focus {outline: none;}
     50%  {background-position: 100% 50%;}
     100% {background-position: 0 50%;}
 }
-.intro > *
+.intro > * , .service-img-color
 {
     filter: drop-shadow(10px 10px 25px #e265ae62);
     -webkit-filter: drop-shadow(10px 10px 25px #e265ae62);
@@ -637,8 +637,12 @@ nav button:focus {outline: none;}
 {
     position: relative;
     margin: 10px;
-    background-color: var(--footer-bg-color);
+    background-color: var(--intro-bg-color);
     border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
     transform-style: preserve-3d;
     padding: 20px;
 }
@@ -690,13 +694,12 @@ nav button:focus {outline: none;}
 .service-img-color 
 {
     position: absolute; 
-    top: 10%;
+    top: -20%;
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 85px;
-    height: 85px;
-    background-color: #c004d9;
+    width: 60%;
+    height: auto;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -709,14 +712,6 @@ nav button:focus {outline: none;}
     -o-transition: all ease 0.5s;
     z-index: -1;
 }
-.services-content:hover
-{
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
 .services-content:hover h4 
 {
     transform: translate3d(0, 0, 60px);
@@ -728,10 +723,13 @@ nav button:focus {outline: none;}
 }
 .services-content:hover .service-img-color 
 {
-    top: -17%;
-    width: 115px;
-    height: 115px;
-    background-color: #138AF2;
+    top: -25%;
+    width: 65%;
+    transform: translate3d(0, -20px, 50px);
+    -webkit-transform: translate3d(0, -20px, 50px);
+    -moz-transform: translate3d(0, -20px, 50px);
+    -ms-transform: translate3d(0, -20px, 50px);
+    -o-transform: translate3d(0, -20px, 50px);
 }
 .services-content:hover .service-data
 {
