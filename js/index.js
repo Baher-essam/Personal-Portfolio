@@ -44,19 +44,18 @@ $(function() {
 $(document).ready(function(){
   //defult active list *all*
   $('.list').first().addClass('active');
-  
+
   $('.list').click(function(){
     const projectList = $(this).attr('data-filter');
     if(projectList == 'all')
     {
-      $('.project').show('300');
+      $('.project').show('50');
     }
     else
     {
-      $('.project').not('.'+projectList).hide('300' ,function(){
-        $('.project').filter('.'+projectList).show('300');
+      $('.project').not('.'+projectList).hide('50' ,function(){
+        $('.project').filter('.'+projectList).show('50');
       });
-    
     }
   })
   // add active class on selected button
