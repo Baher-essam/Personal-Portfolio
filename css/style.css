@@ -1,4 +1,5 @@
 @import url(spaces.min.css);
+@import url(aos.css);
 :root{
     /*color*/
     --primary-color1: #c004d9;
