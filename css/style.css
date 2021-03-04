@@ -1033,6 +1033,4 @@ footer p span:last-child {color: var(--primary-color4);}
         padding-right: 20px!important;
         padding-left: 20px!important;
     }
-    /*footer*/
-    footer svg {width: 15px!important; height: 15px!important;}
 }
