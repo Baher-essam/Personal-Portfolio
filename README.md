@@ -6,7 +6,7 @@
 <a href="https://github.com/Baher-essam/Personal-Portfolio/issues"><img src="https://img.shields.io/github/issues/Baher-essam/Personal-Portfolio" alt="Issues Badge"/></a>
 <a href="https://github.com/Baher-essam/Personal-Portfolio/languages/count"><img src="https://img.shields.io/github/languages/count/Baher-essam/Personal-Portfolio" alt="Issues Badge"/></a>
 <a href="https://github.com/Baher-essam/Personal-Portfolio/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Baher-essam/Personal-Portfolio?color=2b9348"></a>
-Technologies used : 
+<a href"https://img.shields.io/github/issues-pr-closed/Baher-essam/Personal-Portfolio?color=red">
 
 
 ![Baher Essam cover](https://user-images.githubusercontent.com/44957599/110094258-4aebad80-7da4-11eb-8eea-16a0b87cdce7.png)
