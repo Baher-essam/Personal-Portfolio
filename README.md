@@ -5,7 +5,6 @@
 <a href="https://github.com/Baher-essam/Personal-Portfolio/pulls?q=is%3Apr+is%3Aclosed"><img alt="GitHub closed pull requests" src="https://img.shields.io/github/issues-pr-closed/Baher-essam/Personal-Portfolio?color=red"></a>
 <a href="https://github.com/Baher-essam/Personal-Portfolio/issues"><img src="https://img.shields.io/github/issues/Baher-essam/Personal-Portfolio" alt="Issues Badge"/></a>
 <a href="https://github.com/Baher-essam/Personal-Portfolio/languages"><img src="https://img.shields.io/github/languages/count/Baher-essam/Personal-Portfolio" alt="languages"/></a>
-<a href="https://github.com/Baher-essam/Personal-Portfolio/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Baher-essam/Personal-Portfolio?color=2b9348"></a>
 
 
 
