@@ -75,17 +75,13 @@
     -webkit-animation: lightMode 2s infinite cubic-bezier(0, 0, 0.50, 0.50);
 }
 @keyframes lightMode {
-    0%
+    0%, 100%
     {
         box-shadow: 0 0 15px var(--box-shadow-color1);
     }
     50%
     {
         box-shadow: 0 0 25px var(--box-shadow-color1);
-    }
-    100%
-    {
-        box-shadow: 0 0 15px var(--box-shadow-color1);
     }
 }
 #lightModeToggle .lightModeRotate
@@ -177,7 +173,7 @@
 ::selection { background-color:#5A13F2; color:var(--white);}
 html{scroll-behavior: smooth;}
 a , button {color: var(--white); text-decoration: none;}
-
+a:hover {text-decoration: none;color: var(--white);}
 /*intro, aboutme*/
 .main-btn{
     background-color: var(--btn-bg-color);
@@ -284,17 +280,13 @@ header .bg1
     -webkit-animation: boxanimation 2s  infinite cubic-bezier(0, 0, 0.50, 0.50);
 }
 @keyframes boxanimation {
-    0%
+    0%,    100%
     {
         box-shadow:  0px 15px 33px #ab05f2;
     }
     50%
     {
         box-shadow:  0px 20px 40px #ab05f2;
-    }
-    100%
-    {
-        box-shadow:  0px 15px 33px #ab05f2;
     }
 }
 header .bg2 
@@ -404,9 +396,8 @@ nav button:focus {outline: none;}
 }
 @keyframes change
 {
-    0%   {background-position: 0 50%;}
+    0%  , 100%  {background-position: 0 50%;}
     50%  {background-position: 100% 50%;}
-    100% {background-position: 0 50%;}
 }
 .intro > * , .service-img-color
 {
@@ -760,6 +751,7 @@ nav button:focus {outline: none;}
     color: var(--primary-color7);
     font-weight: 400;
 }
+.project-deatils{position: relative; font-family: monospace;}
 .project-img {overflow: hidden;}
 .project-img img
 {
@@ -771,8 +763,6 @@ nav button:focus {outline: none;}
     height: 250px;
     width: 100%;
 }
-
-.project-deatils {cursor: pointer;}
 .project-deatils:hover .project-img img
 {
     transform: scale(1.2);
@@ -780,6 +770,122 @@ nav button:focus {outline: none;}
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
+}
+.project-content 
+{
+    background-color: var(--footer-bg-color);
+    padding: 2% 5%;
+}
+.project-description , .tech-used p  {font-size: 12px;}
+.tech-used  ul
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 300;
+}
+.tech-name
+{
+    margin: 5px;
+    padding: 1px .3rem;
+    font-size: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.tech-name:before 
+{
+    content: "#";
+    padding-right: 5px;
+    color: #000;
+}
+.tech-name:nth-child(1) {background-color: #097e9e;}
+.tech-name:nth-child(2) {background-color: #cc6699;}
+.tech-name:nth-child(3) {background-color: #0b3fa1;}
+.tech-name:nth-child(4) {background-color: #563d7c;}
+.tech-name:nth-child(5) {background-color: #d912f3;}
+.tech-name:nth-child(6) {background-color: #563d7c;}
+.tech-name:nth-child(7) {background-color: #d912f3;}
+.tech-name:nth-child(8) {background-color: #563d7c;}
+.tech-name:nth-child(9) {background-color: #d912f3;}
+.project-live .live
+{
+    border: solid 1px var(--light-red);
+    color: var(--light-red);
+    padding: 2px 7px 2px 15px;
+    position: relative;
+    text-decoration: none;
+}
+.project-live .live::before
+{
+    content:"";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    background-color: var(--light-red);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    animation:  live 1.5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    -webkit-animation:  live 1.5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+}
+@keyframes live {
+    0% , 100% {background-color: #ff4242;}
+    50%{background-color: #ff42422c;}
+}
+.live.offline
+{
+    border: solid 1px var(--gray-light);
+    color: var(--gray-light);
+}
+.live.offline::before
+{
+    background-color: var(--gray-light);
+    animation: none;
+    -webkit-animation: none;
+}
+.project-live .source
+{
+    background-color: #563d7c;
+    color: #181f2a;
+    padding: 3px 3px 3px 15px;
+    position: relative;
+    margin: 5px;
+}
+.project-live .source::before
+{
+    content: '';
+    background-image: url(../images/github.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position:center center;
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.project-overlay    
+{
+    position: absolute;
 }
 /*end of projects*/
 
@@ -801,17 +907,13 @@ nav button:focus {outline: none;}
     -webkit-animation:  contact-animation 5s infinite cubic-bezier(0, 0, 0.50, 0.50);
 }
 @keyframes contact-animation {
-    0%
+    0%,  100%
     {
         box-shadow: 0 0 35px var(--box-shadow-color1);
     }
     50%
     {
         box-shadow: 0 0 50px var(--box-shadow-color1);
-    }
-    100%
-    {
-        box-shadow: 0 0 35px var(--box-shadow-color1);
     }
 }
 button.main-btn
