@@ -20,13 +20,13 @@ VanillaTilt.init(document.querySelectorAll(".service-animate"), {
 });
 /*3D animator*/
 
-/*scrollbar width*/
+/*start of event listeners*/
 window.addEventListener("scroll" , event => {
   progressBar();
   dotsRotate();
   endSite();
 })
-/*end of scrollbar width*/
+/*end of event listeners*/
 
 function progressBar(){
   let scrollTop =document.documentElement.scrollTop;
@@ -36,9 +36,10 @@ function progressBar(){
 };
 
 function dotsRotate(){
-  
-  let imageScroll = $('.dots1');
+  const imageScroll = $('.dots');
+  const dashed = $('.dashed-container');
   imageScroll.css('transform' ,'rotate('+window.pageYOffset/8 +'deg)');
+  dashed.css('transform' ,'rotate('+window.pageYOffset/4 +'deg)');
 };
 
 function endSite(){
@@ -109,10 +110,6 @@ s0.parentNode.insertBefore(s1,s0);
 // });
 /*Services section show and hide cards */
 
-$(function() {
-  $( ".dots" ).clone().appendTo( ".about-me-photo" );
-  $( ".dots").first().clone().appendTo("#aboutMe").addClass('dots1');
-});
 
 
 //loader
