@@ -30,9 +30,12 @@
     <link  rel="stylesheet" href="css/bootstrap.min.css">
     <!--main css-->
    <link rel="stylesheet" href="css/style.css">
-    <title>Baher Essam</title>
+   <title>Baher Essam</title>
+   <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body class="">
+<body id="app">
     <!--start of width scroll-->
     <div id="progress"></div>
     <div id="lightModeToggle">
@@ -120,12 +123,13 @@
         <section id="home" class="intro">
             <div class="container">
                 <div class="intro-content">
-                    <div class="intro-text text-white" data-aos="fade-down">
+                    <div class="intro-text text-white" >
                         <h1> <span>Hi,</span>I'm <span>B</span>aher <span>E</span>ssam</h1>
                         <p>I'm a Web Developer</p>
-                        <a href="#aboutMe" class="text-capitalize px50 main-btn mt10 py5">know more</a>
+                        <a  href="https://drive.google.com/file/d/1WcD2_F2txr8QOWFu8gIfGe6X-FsnseOu/view?usp=sharing" target="_blank" class="text-capitalize px50 main-btn mt10 py5">show resume</a>
+                        
                     </div>
-                    <div class="intro-art text-center" data-aos="fade-down">
+                    <div class="intro-art text-center">
                         <!-- start of animated svg-->
                             <img src="images/intro.svg" alt="intro img">
                         <!--end of animated svg-->
@@ -167,58 +171,6 @@
                             <p>Web development has been always my passion. I still remember coding my first line of code and making it print “hello world!”. It was almost magic, being able to get the computer to do whatever I wanted. <br><br>
 
                             I love applying responsive design with a nice animation and watching my web pages shrink into mobile screens and still look amazing. It’s oddly satisfying.</p>
-                            <!-- <ul class="list-unstyled">
-                                <li class="py-1">
-                                    <span class="pr-1">
-                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        viewBox="0 0 512 512" width="5%"  xml:space="preserve">
-                                            <g>
-                                                <g>
-                                                    <path d="M256,0C161.896,0,85.333,76.563,85.333,170.667c0,28.25,7.063,56.26,20.49,81.104L246.667,506.5
-                                                        c1.875,3.396,5.448,5.5,9.333,5.5s7.458-2.104,9.333-5.5l140.896-254.813c13.375-24.76,20.438-52.771,20.438-81.021
-                                                        C426.667,76.563,350.104,0,256,0z M256,256c-47.052,0-85.333-38.281-85.333-85.333c0-47.052,38.281-85.333,85.333-85.333
-                                                        s85.333,38.281,85.333,85.333C341.333,217.719,303.052,256,256,256z"/>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </span>
-                                    <span>Cairo, Egypt.</span>
-                                </li>
-
-                                <li class="py-1">
-                                    <span class="pr-1">
-                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        viewBox="0 0 230.17 230.17" width="5%"  xml:space="preserve">
-                                        <g>
-                                            <path d="M230,49.585c0-0.263,0.181-0.519,0.169-0.779l-70.24,67.68l70.156,65.518c0.041-0.468-0.085-0.94-0.085-1.418V49.585z"/>
-                                            <path d="M149.207,126.901l-28.674,27.588c-1.451,1.396-3.325,2.096-5.2,2.096c-1.836,0-3.672-0.67-5.113-2.013l-28.596-26.647
-                                                L11.01,195.989c1.717,0.617,3.56,1.096,5.49,1.096h197.667c2.866,0,5.554-0.873,7.891-2.175L149.207,126.901z"/>
-                                            <path d="M115.251,138.757L222.447,35.496c-2.427-1.443-5.252-2.411-8.28-2.411H16.5c-3.943,0-7.556,1.531-10.37,3.866
-                                                L115.251,138.757z"/>
-                                            <path d="M0,52.1v128.484c0,1.475,0.339,2.897,0.707,4.256l69.738-67.156L0,52.1z"/>
-                                        </g>
-                                    </svg>
-                                    </span>
-                                    <span><a href="mailto:baher.essam@gmail.com" class="">baher.essam@gmail.com</a></span>
-                                </li>
-
-                                <li class="py-1">
-                                    <span class="pr-1">
-                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                        viewBox="0 0 384 384" width="5%"  xml:space="preserve">
-                                            <g>
-                                                <g>
-                                                    <path d="M362.667,266.667c-26.56,0-52.267-4.267-76.16-12.16c-7.36-2.347-15.787-0.64-21.653,5.227l-46.933,47.04
-                                                        c-60.48-30.72-109.867-80.107-140.587-140.48l46.933-47.147c5.867-5.867,7.573-14.293,5.227-21.653
-                                                        c-7.893-23.893-12.16-49.6-12.16-76.16C117.333,9.493,107.84,0,96,0H21.333C9.6,0,0,9.493,0,21.333
-                                                        C0,221.653,162.347,384,362.667,384c11.84,0,21.333-9.493,21.333-21.333V288C384,276.16,374.507,266.667,362.667,266.667z"/>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </span>
-                                    <span><a href="tel:+201146786272" class="">+2-01146786272</a></span>
-                                </li>
-                            </ul> -->
                             <div class="social">
                             <!--social accounts-->
                                 <ul class="list-unstyled social-data mt-1">
@@ -242,106 +194,11 @@
                             <!--dawnload my updated CV-->
                             </div>
                             <div class="download-cv mt30 text-sm-center">
-                                <a href="https://drive.google.com/file/d/1WcD2_F2txr8QOWFu8gIfGe6X-FsnseOu/view?usp=sharing" target="_blank" class="text-uppercase px50  main-btn py5">Show Resume</a>
-                        </div>
+                                <a href="/about.html" target="_blank" class="text-uppercase px50  main-btn py5">see more</a>
+                            </div>
                         </div>
                     </div>
-                    <!--experince and education-->
                 </div>
-                <!-- <div class="experince-data mt-5">
-                    <div class="experince-title text-capitalize text-center">
-                        <h3>Experience</h3>
-                    </div>
-                    <div class="experince-data-content">
-                        <div class="row">
-                            <div class="col-sm-12 my-3 pt-3">
-                                <div class=" experince-year">
-                                    <span>2021</span>
-                                </div>
-                            </div>
-                            <div class="col-12  my-3 px-0">
-                                <div class="experince-work mx-4"  data-aos="fade-right">
-                                    <div class="experince-work-title">
-                                        <h6 class="text-capitalize">akwan media</h6>
-                                    </div>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,</p>
-                                    <a href="https://akwanmedia.com/ar" target="_blank">
-                                
-                                    </a>
-                                </div>
-                                <div class="experince-time " data-aos="fade-left">Mar - 2020</div>
-                                <div class="experince-dot" data-aos="fade-up"></div>
-                            </div>
-                            <div class="col-12  col-sm-12  my-3 px-0">
-                                <div class="experince-work mx-4">
-                                    <div>
-                                        <div class="experince-work-title">
-                                            <h6 class="text-capitalize">attractive car</h6>
-                                        </div>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,</p>
-                                        <a href="https://attcar.com/" target="_blank">
-                                            <picture>
-                                                <source srcset="images/work-project2.webp">
-                                                <source srcset="images/work-project2.jpg">
-                                                <img src="images/work-project2.jpg" class="img-fluid" />
-                                            </picture>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="experince-time ">Feb - 2020 </div>
-                                <div class="experince-dot"></div>
-                            </div>
-                            
-                            <div class="col-12 col-sm-12  my-3 px-0">
-                                <div class="experince-work mx-4">
-                                <div>
-                                    <div class="experince-work-title">
-                                        <h6 class="text-capitalize">rowadUN</h6>
-                                    </div>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,</p>
-                                    <a href="https://rowadun.com/" target="_blank">
-                                        <picture>
-                                            <source srcset="images/work-project1.webp">
-                                            <source srcset="images/work-project1.jpg">
-                                            <img src="images/work-project1.jpg" class="img-fluid" />
-                                        </picture>
-                                    </a>
-                                </div>
-                                </div>
-                                <div class="experince-time ">Jan - 2020</div>
-                                <div class="experince-dot"></div>
-                            </div>
-                            <div class="col-12 my-3 px-0">
-                                <div class="experince-work mx-4">
-                                    <div class="experince-work-title">
-                                        <h6 class="text-capitalize">akwan media - web developer</h6>
-                                    </div>
-                                    <ul class="text-muted px-4">
-                                        <p class="mb-0">My responsibilities include:</p>
-                                        <li>build, and maintain highly reusable JavaScript, HTML, and CSS code.</li>
-                                        <li>Build reusable code and libraries for future use</li>
-                                        <li>Maintain and update responsive websites</li>
-                                        <li>Troubleshoot website problems</li>
-                                        <li>Optimize websites for maximum speed and scalability</li>
-                                        <li>Collaborate with other team members and stakeholders</li>
-                                        <li>Assure that all user input is validated before submitting to back-end</li>
-                                        <li>Integrate data from various back-end services and databases</li>
-                                        <li>Working with modern tools including GIT, Slack, GitHub.</li>
-                                        <li>Back up files from Web sites to local directories for recovery.</li>
-                                        <li>knowledgeable of SEO principles</li>
-                                    </ul>
-                                </div>
-                                <div class="experince-time ">Jan - 2020</div>
-                                <div class="experince-dot"></div>
-                            </div>
-                            <div class="col-sm-12 my-2">
-                                <div class=" experince-year">
-                                    <span>2020</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </section>
         <!-- end of about me-->
@@ -423,7 +280,7 @@
                         </div>
                     </div>
                 </div>
-                <!--service 5-->
+                <!--service 6-->
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-5 mt-1 ">
                     <div class="services-content service-animate">
                         <div class="service-img">
@@ -444,7 +301,7 @@
         <!--start of porjects-->
         <section id="projects" class="py-5">
             <div class="container">
-                <div class="row align-items-center justify-content-center">
+                <div class="row align-items-start justify-content-center">
                     <div class="col-12  text-capitalize text-center">
                         <div class="section-title">
                             <h1>projects</h1>
@@ -693,7 +550,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 project ui-ux "> 
+                    <!-- <div class="col-lg-4 col-md-6 col-sm-12 project ui-ux "> 
                         <a href="https://www.behance.net/gallery/90820417/Bezell" target="_blank">
                             <div class="project-deatils">
                                 <div class="project-img">
@@ -707,11 +564,10 @@
                                     <div class="d-flex justify-content-between align-items-center mb10">
                                         <h5 class="project-name mb0">Bezel</h5>
                                         <div class="project-live">
-                                               <!-- <a role="button" class="source" target="_blank" rel="noopener noreferrer" href="https://github.com/baher-essam/coder-bits">source</a> -->
                                                <span class="live offline">offline</span>
                                         </div>
                                     </div>
-                                    <!--used tech-->
+                                    used tech
                                     <div class="tech-used mb10">
                                         <p class="mb0">Used Technologies:</p>
                                         <ul class="list-unstyled mb0">
@@ -724,13 +580,10 @@
                                     </div>
                                  
                                 </div>
-                                <!-- <div class="project-overlay">
-                                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ullam fugit maiores minima aut et.</p>
-                                </div> -->
-                                <!-- <div class="project-status"></div> -->
+                                <div class="project-status"></div>
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                     <div class="col-lg-4 col-md-6 col-sm-12 project ui-ux">
                         <div class="project-deatils text-white">
                             <div class="project-img">
@@ -768,7 +621,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 project websites">
+                    <!-- <div class="col-lg-4 col-md-6 col-sm-12 project websites">
                         <a href="https://evolove.netlify.app/" target="_blank">
                             <div class="project-deatils">
                                 <div class="project-img">
@@ -782,11 +635,10 @@
                                     <div class="d-flex justify-content-between align-items-center mb10">
                                         <h5 class="project-name mb0">Evolove</h5>
                                         <div class="project-live">
-                                               <!-- <a role="button" class="source" target="_blank" rel="noopener noreferrer" href="https://github.com/baher-essam/coder-bits">source</a> -->
                                                <span class="live offline">offline</span>
                                         </div>
                                     </div>
-                                    <!--used tech-->
+                                    used tech
                                     <div class="tech-used mb10">
                                         <p class="mb0">Used Technologies:</p>
                                         <ul class="list-unstyled mb0">
@@ -799,13 +651,9 @@
                                     </div>
                                  
                                 </div>
-                                <!-- <div class="project-overlay">
-                                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ullam fugit maiores minima aut et.</p>
-                                </div> -->
-                                <!-- <div class="project-status"></div> -->
                             </div>
                         </a>
-                    </div>
+                    </div> -->
 
 
                     <div class="col-lg-4 col-md-6 col-sm-12 project websites freelance wordpress work">
@@ -840,6 +688,44 @@
                             <div class="project-status">coming soon</div>
                         </div>
                     </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 project websites freelance wordpress work">
+                        <div class="project-deatils text-white">
+                            <div class="project-img coming-soon">
+                                <picture>
+                                    <source srcset="images/madz.webp" type="">
+                                    <source srcset="images/madz.png">
+                                    <img src="images/madz.png" alt="madz native project" class="img-fluid">
+                                </picture>
+                            </div>
+                            <div class="project-content ">
+                                <div class="d-flex justify-content-between align-items-center mb10 ">
+                                    <h5 class="project-name mb0">Madz</h5>
+                                    <div class="project-live">
+                                           <!-- <a role="button" class="source" target="_blank" rel="noopener noreferrer" href="https://github.com/baher-essam/coder-bits">source</a> -->
+                                           <span class="live offline">offline</span>
+                                    </div>
+                                </div>
+                                <!--used tech-->
+                                <div class="tech-used mb10">
+                                    <p class="mb0">Used Technologies:</p>
+                                    <ul class="list-unstyled mb0">
+                                        <li class="tech-name">HTML5</li>
+                                        <li class="tech-name">CSS3</li>
+                                        <li class="tech-name">Bootstrap</li>
+                                        <li class="tech-name">Javascript</li>
+                                        <li class="tech-name">Jquery</li>
+                                    </ul>
+                                </div>
+                             
+                            </div>
+                            <!-- <div class="project-overlay">
+                                <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ullam fugit maiores minima aut et.</p>
+                            </div> -->
+                            <div class="project-status">coming soon</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
