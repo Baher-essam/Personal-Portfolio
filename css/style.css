@@ -906,10 +906,10 @@ nav button:focus {outline: none;}
 }
 .project-progress .in-progress::before{
    background-color: var(--in-progress);
-    animation:  in-progress 1.5s infinite cubic-bezier(0, 0, 0.50, 0.50);
-    -webkit-animation:  in-progress 1.5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    animation:  progressing 1.5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    -webkit-animation:  progressing 1.5s infinite cubic-bezier(0, 0, 0.50, 0.50);
 }
-@keyframes in-progress {
+@keyframes progressing {
     0% , 100% {background-color: var(--in-progress);}
     50%{background-color: var(--in-progress);}
 }
