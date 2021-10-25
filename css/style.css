@@ -12,6 +12,7 @@
     --Cyan :#65e2d9;
     --blue: #339ecc;
     --light-red:#ff4242;
+    --in-progress:#F5E617;
     --gray-light: #aaacaf;
     --white:#fff;
     --black:#000;
@@ -900,10 +901,11 @@ nav button:focus {outline: none;}
     50%{background-color: #ff42422c;}
 }
 .in-progress{
-     border: solid 1px #F5E617;
+     border: solid 1px var(--in-progress);
+     color: var(--in-progress);
 }
 .in-progress::before{
-     border: solid 1px #F5E617;
+   background-color: var(--in-progress);
 }
 .live.offline
 {
