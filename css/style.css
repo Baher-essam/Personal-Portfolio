@@ -865,7 +865,7 @@ nav button:focus {outline: none;}
 .tech-name:nth-child(7) {background-color: #d912f3;}
 .tech-name:nth-child(8) {background-color: #563d7c;}
 .tech-name:nth-child(9) {background-color: #d912f3;}
-.project-live .live
+.project-live .live, .in-progress
 {
     border: solid 1px var(--light-red);
     color: var(--light-red);
@@ -873,7 +873,7 @@ nav button:focus {outline: none;}
     position: relative;
     text-decoration: none;
 }
-.project-live .live::before
+.project-live .live::before , .in-progress::before
 {
     content:"";
     width: 5px;
@@ -898,6 +898,12 @@ nav button:focus {outline: none;}
 @keyframes live {
     0% , 100% {background-color: #ff4242;}
     50%{background-color: #ff42422c;}
+}
+.in-progress{
+     border: solid 1px #F5E617;
+}
+.in-progress::before{
+     border: solid 1px #F5E617;
 }
 .live.offline
 {
