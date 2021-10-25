@@ -874,7 +874,7 @@ nav button:focus {outline: none;}
     position: relative;
     text-decoration: none;
 }
-.project-live .live::before , .project-progress .in-progress::before
+.project-live .live::before , .project-progress .in-progress::before 
 {
     content:"";
     width: 5px;
