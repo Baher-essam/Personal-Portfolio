@@ -906,6 +906,12 @@ nav button:focus {outline: none;}
 }
 .project-progress .in-progress::before{
    background-color: var(--in-progress);
+    animation:  in-progress 1.5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+    -webkit-animation:  in-progress 1.5s infinite cubic-bezier(0, 0, 0.50, 0.50);
+}
+@keyframes in-progress {
+    0% , 100% {background-color: #ff4242;}
+    50%{background-color: #ff42422c;}
 }
 .live.offline
 {
