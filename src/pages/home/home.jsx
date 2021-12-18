@@ -47,7 +47,7 @@ const home = () => {
                                     ))}  
                                     </ul>
                                 </div>
-                            <a href="https://drive.google.com/file/d/1WcD2_F2txr8QOWFu8gIfGe6X-FsnseOu/view?usp=sharing"  rel="noreferrer noopener" target="_blank" className="text-capitalize mx-2 px-3 main-btn mt-5 py-1">show resume</a>
+                            <a href="https://drive.google.com/file/d/1NKxVa9dyyU4YVLkWI_-IVWPGz3Xj_p0t/view?usp=drivesdk"  rel="noreferrer noopener" target="_blank" className="text-capitalize mx-2 px-3 main-btn mt-5 py-1">show resume</a>
                             <a href="#contact"  rel="noreferrer noopener" className="text-capitalize px-3 mx-2 main-btn mt-5 py-1">Hire me</a>
                         </div>
                     </div>
