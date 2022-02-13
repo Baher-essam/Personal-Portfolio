@@ -1,12 +1,30 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Typical from 'react-typical'
-
 import './home.css'
 import About from '../about/about'
 import {aboutData} from '../../fake-database/index'
-import bg2 from '../../Assets/images/shape3.gif'
+import bg2 from '../../Assets/images/shape4.gif'
 
-const home = () => {
+
+
+
+const Home = () => {
+    // let glitch = useRef(null);
+
+    // const loo = () => {
+    //     let steps = 30;
+      
+    //     for (let count = 1; count < steps; count++) {
+    //         let top = Math.floor(Math.random() * 100);
+    //         let bottom = Math.floor(Math.random() * (101 - top));
+           
+       
+    //         // el.style.clipPath = `inset(${top}px 60px ${bottom}px 60px)`;
+    //     }
+    //     let el = glitch.current;
+    //     console.log(el);
+    //   }
+    //   loo();
     return (
         <main>
             <section id="intro" className="intro d-flex justify-content-center align-items-center">
@@ -15,17 +33,20 @@ const home = () => {
                         <div className="intro-art text-center">
                             <img src={bg2} alt="intro image" className="img-fluid intro-img1"/>
                             <div className="intro-img2">
-                                <img src={aboutData.introImg} alt="intro image"/>
+                                <picture>
+                                    <source srcSet={aboutData.introImgwebp} alt={aboutData.introImgAlt} className="img-fluid"/>
+                                    <img src={aboutData.introImg} alt={aboutData.introImgAlt} className="img-fluid"/>
+                                </picture>
                             </div>
                         </div>
-                        <div className="intro-text text-white text-center">
+                        <div className="intro-text text-white text-center" >
                             <h1 >
-                                <span>Hi,</span>I'm <span className='glitch' data-text={aboutData.name}>{aboutData.name}</span>
+                                <span>Hi,</span>I'm <span className='glitch' ref={glitch}  data-content={aboutData.name}>{aboutData.name}</span>
                             </h1>
                             <p>I'm a 
                                 <Typical
                                     loop={Infinity}
-                                    wrapper="i" //Bold
+                                    wrapper="i" //italic
                                     steps={[
                                         ' Web Developer',
                                         2000,
@@ -58,4 +79,4 @@ const home = () => {
     )
 }
 
-export default home
+export default Home
