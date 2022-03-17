@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import Typical from 'react-typical'
 import './home.css'
 import About from '../about/about'
@@ -9,22 +9,6 @@ import bg2 from '../../Assets/images/shape4.gif'
 
 
 const Home = () => {
-    // let glitch = useRef(null);
-
-    // const loo = () => {
-    //     let steps = 30;
-      
-    //     for (let count = 1; count < steps; count++) {
-    //         let top = Math.floor(Math.random() * 100);
-    //         let bottom = Math.floor(Math.random() * (101 - top));
-           
-       
-    //         // el.style.clipPath = `inset(${top}px 60px ${bottom}px 60px)`;
-    //     }
-    //     let el = glitch.current;
-    //     console.log(el);
-    //   }
-    //   loo();
     return (
         <main>
             <section id="intro" className="intro d-flex justify-content-center align-items-center">
@@ -41,7 +25,8 @@ const Home = () => {
                         </div>
                         <div className="intro-text text-white text-center" >
                             <h1 >
-                                <span>Hi,</span>I'm <span className='glitch' ref={glitch}  data-content={aboutData.name}>{aboutData.name}</span>
+                                
+                                <span>Hi,</span>I'm <span className='glitch'  data-content={aboutData.name}>{aboutData.name}</span>
                             </h1>
                             <p>I'm a 
                                 <Typical
