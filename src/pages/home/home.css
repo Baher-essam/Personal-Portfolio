@@ -18,10 +18,6 @@
     0%  , 100%  {background-position: 0 50%;}
     50%  {background-position: 100% 50%;}
 }
-.intro h1 span:nth-child(1)
-{
-    color: var(--primary-color6);
-}
 .intro-content
 {
     display: grid;
@@ -30,7 +26,6 @@
     align-items: center;
     /* padding-top: calc(5% + 10px); */
 }
-.intro-content  h1 {font-size: calc(1rem + 2vw)}
 .intro-art{
     position: relative;
     overflow: hidden;
@@ -55,10 +50,14 @@
   filter: drop-shadow(0 0 10px #e265ae62);
   -webkit-filter: drop-shadow(0 0 10px #e265ae62);
 }
-
-/*end of intro*/
+.intro-text-fixed {font-size: calc(1rem + 2vw)}
+.intro-text-fixed span:nth-child(1){color: var(--primary-color6);}
+.intro-text-changing{font-weight: 300;}
+.intro-text-changing i{font-weight: 500;}
+/*gltich*/
 .glitch {
     position: relative;
+    display: inline-block;
 }
 .glitch::before,
 .glitch::after{
@@ -232,4 +231,4 @@
       width: 48%;
     }
 }
-
+/*end of intro*/

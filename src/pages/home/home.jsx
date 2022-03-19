@@ -24,11 +24,10 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="intro-text text-white text-center" >
-                            <h1 >
-                                
-                                <span>Hi,</span>I'm <span className='glitch'  data-content={aboutData.name}>{aboutData.name}</span>
-                            </h1>
-                            <p>I'm a 
+                            <p className='intro-text-fixed mb-0'>
+                                <span>Hi,</span>I'm <h1 className='glitch'  data-content={aboutData.name}>{aboutData.name}</h1>
+                            </p>
+                            <p className='intro-text-changing'>I'm a 
                                 <Typical
                                     loop={Infinity}
                                     wrapper="i" //italic
