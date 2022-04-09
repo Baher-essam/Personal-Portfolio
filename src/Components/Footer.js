@@ -1,9 +1,21 @@
 import React from 'react'
+import {aboutData} from '../fake-database/index'
 
 const FooterComponent = () => {
     return (
         <footer>
             <div className="container py-3 text-center text-white">
+                <div className="social">
+                    <ul className="list-unstyled social-data mt-1">   
+                    {aboutData.Social.map( social =>(
+                        <li key={social.id}>
+                            <a href={social.url}  rel="noreferrer noopener" target="blank">
+                                <img src={social.photo} alt={social.name} />
+                            </a>
+                        </li>
+                    ))}  
+                    </ul>
+                </div>
                 <p className="mb-0">Made with <span><svg version="1.1" id="Capa_1" width="12px" height="10px" xlinkHref="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 391.837 391.837">
                     <g><path  d="M285.257,35.528c58.743,0.286,106.294,47.836,106.58,106.58
