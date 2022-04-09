@@ -2,6 +2,7 @@ import React from 'react'
 import Typical from 'react-typical'
 import './home.css'
 import About from '../about/about'
+import Services from '../services/services'
 import {aboutData} from '../../fake-database/index'
 import bg2 from '../../Assets/images/shape4.gif'
 
@@ -59,6 +60,7 @@ const Home = () => {
                 </div>
             </section>
             <About/>
+            <Services/>
         </main>
     )
 }
