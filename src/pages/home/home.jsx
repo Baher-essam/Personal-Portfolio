@@ -61,6 +61,55 @@ const Home = () => {
             </section>
             <About/>
             <Services/>
+
+            <section id="contact" className="mb40 mt70 ">
+            <div className="container">
+                <div className="row align-items-center">
+                    <div className="col-12  text-capitalize text-center">
+                        <div className="section-title contact-title">
+                            <h1><span><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#AB05F2" d="M50.7,-39.1C65.4,-21.9,77,-0.8,74.5,19.8C72,40.4,55.5,60.6,34.9,69.3C14.3,78,-10.3,75.2,-31.8,65.1C-53.3,55.1,-71.8,37.9,-74.4,19.1C-76.9,0.4,-63.5,-19.8,-48.5,-37C-33.4,-54.3,-16.7,-68.6,0.6,-69.1C18,-69.6,35.9,-56.3,50.7,-39.1Z" transform="translate(100 100)" />
+                                    </svg></span>feeling convinced
+                            </h1>
+                        </div>
+                    </div>
+              
+                    <div className="col-sm-12">
+                        <div className="contact-form  mt50">
+                            <form className="form" id="myForm">
+                                <input type="hidden" name="form-name" value="contact"/>
+                                <div className="form-group">
+                                    <input type="text" name="name" required  className="form-control"/>
+                                    <label htmlFor="name" className="label-content">
+                                        <span className="span-data">Name</span>
+                                    </label>
+                                </div>
+                                <div className="form-group">
+                                    <input type="email" name="email" required  className="form-control"/>
+                                    <label htmlFor="email" className="label-content">
+                                        <span className="span-data">Email</span>
+                                    </label>
+                                </div>
+                                <div className="form-group">
+                                    <input type="text" name="number" required  className="form-control"/>
+                                    <label htmlFor="number" className="label-content">
+                                        <span className="span-data">Number</span>
+                                    </label>
+                                </div>
+                                <div className="form-group">
+                                <label htmlFor="message" className="message">Message</label>
+                                <textarea name="message" rows="4" placeholder="Enter Message..." className="form-control"></textarea>
+                                </div>
+                                <div className="text-center">
+                                    <button type="submit" className="text-capitalize px60 main-btn mt10 py5">Send Message</button>
+                                </div>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         </main>
     )
 }
