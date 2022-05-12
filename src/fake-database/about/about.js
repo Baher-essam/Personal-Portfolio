@@ -4,13 +4,19 @@ import introImg from '../../Assets/images/frame2.png'
 import introImgwebp from '../../Assets/images/frame2.webp'
 import github from '../../Assets/badges/github.svg'
 import linkedin from '../../Assets/badges/linkedin.svg'
+import mail from '../../Assets/badges/mail.svg'
 import codepen from '../../Assets/badges/codepen.svg'
+import adderssImg from '../../Assets/badges/location.svg'
+import phoneImg from '../../Assets/badges/phone.svg'
 
 const aboutData = {
         "name" : "Baher Essam",
         "adderss" : "Cairo, Egypt.",
         "phone" : "(+02) 01146786272",
         'email': 'baher.essam@gmail.com',
+        "adderssImg" : adderssImg,
+        "phoneImg" : phoneImg,
+        'emailImg': mail,
         'age': 25,
         "job" : [ "Freelancer", "Web Developer" ],
         "skills" : ["Html5", "CSS3",'Bootstrap4','Matrtlize.css','Tailwind css', "Javascript", 'Jquery',  "react-bootstrap", "Reactjs", 'JSX', 'PWA', 'laravel',"WIX / EditorX" , "Wordpress"  ],
@@ -42,6 +48,12 @@ const aboutData = {
                 'name': 'codepen',
                 "photo" : codepen,
                 "url" : "https://codepen.io/Baher-Essam"
+            },
+            {
+                'id':4,
+                'name': 'mail',
+                "photo" : mail,
+                "url" : "mailto:baher.essam@gmail.com"
             }
         ]
 }
