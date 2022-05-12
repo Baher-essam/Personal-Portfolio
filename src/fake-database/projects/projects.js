@@ -6,8 +6,9 @@ import project6 from '../../Assets/images/project-6.webp'
 import project7 from '../../Assets/images/project-7.webp'
 import project8 from '../../Assets/images/project-8.webp'
 import project9 from '../../Assets/images/project-9.webp'
-import project10 from '../../Assets/images/project-11.webp'
-import project11 from '../../Assets/images/project-10.webp'
+import project010 from '../../Assets/images/project-11.webp'
+import project011 from '../../Assets/images/project-10.webp'
+import project012 from '../../Assets/images/project-12.webp'
 
 import projectO1 from '../../Assets/images/project-1.jpg'
 import projectO3 from '../../Assets/images/project-3.jpg'//not exist
@@ -17,8 +18,9 @@ import projectO6 from '../../Assets/images/project-6.jpg'
 import projectO7 from '../../Assets/images/project-7.jpg'
 import projectO8 from '../../Assets/images/project-8.jpg'
 import projectO9 from '../../Assets/images/project-9.jpg'
-import projectO10 from '../../Assets/images/project-11.jpg'
-import projectO11 from '../../Assets/images/project-10.jpg'
+import project10 from '../../Assets/images/project-11.jpg'
+import project11 from '../../Assets/images/project-10.jpg'
+import project12 from '../../Assets/images/project-12.png'
 
 
 const projectsData =[
@@ -119,16 +121,16 @@ const projectsData =[
         "image" : project9,
         "tech" : [ "WIX / EditorX" ],
         "name" : "advalue",
-        "status" : "completed",
+        "status" : "live",
         "tag" : "allprojects",
         "text" : "this is a project2",
         "category" : "freelance",
         "imageAlt" : "advalue project",  
-        "url" : null,
+        "url" : 'https://www.advaluesolutions.com/',
       },
       {
         "id" : 9,
-        "imageO" : projectO10,
+        "imageO" : project010,
         "image" : project10,
         "tech" : [ "Html5", "CSS3",'Bootstrap4', "Javascript" ],
         "name" : "Madz",
@@ -141,15 +143,27 @@ const projectsData =[
       }, 
       {       
         "id" : 10,
-        "imageO" : projectO11,
+        "imageO" : project011,
         "image" : project11,
         "tech" : [ "Html5", "CSS3", "react-bootstrap", "Reactjs", 'JSX', 'PWA'],
         "name" : "macline",
+        "status" : "live",
+        "category" : "freelance",
+        "imageAlt" : "macline project",
+        "url" : null,
+      },
+      {       
+        "id" : 11,
+        "imageO" : project012,
+        "image" : project12,
+        "tech" : [ 'WordPress'],
+        "name" : "Igroup",
         "status" : "building",
         "category" : "freelance",
         "imageAlt" : "macline project",
         "url" : null,
       }
+
 
 ]
 
