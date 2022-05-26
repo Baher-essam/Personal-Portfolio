@@ -150,7 +150,7 @@ const projectsData =[
         "status" : "live",
         "category" : "freelance",
         "imageAlt" : "macline project",
-        "url" : null,
+        "url" : 'https://macline.netlify.app/',
       },
       {       
         "id" : 11,
@@ -158,10 +158,10 @@ const projectsData =[
         "image" : project12,
         "tech" : [ 'WordPress'],
         "name" : "Igroup",
-        "status" : "building",
+        "status" : "live",
         "category" : "freelance",
         "imageAlt" : "macline project",
-        "url" : null,
+        "url" : 'http://igroupegypt.com/',
       }
 
 
