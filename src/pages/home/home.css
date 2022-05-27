@@ -34,8 +34,9 @@
     padding: 10px 0;
 }
 .intro-img1{
-  width: 25%;
+  width: 50%;
   margin: auto;
+  opacity: 0.3;
 }
 .intro-img2{
   position: absolute;
@@ -46,7 +47,7 @@
   -moz-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   -o-transform: translate(-50%,-50%);
-  width: 23%;
+  width: 46%;
   filter: drop-shadow(0 0 10px #e265ae62);
   -webkit-filter: drop-shadow(0 0 10px #e265ae62);
 }
@@ -359,12 +360,12 @@ form .message {  color: var(--gray-light);}
 }
 /*end of contact*/
 
-  @media  screen and (max-width: 478px) {
+  /* @media  screen and (max-width: 478px) {
     .intro-img1{
-      width: 50%;
+      width: 52%;
     }
     .intro-img2{
       width: 48%;
     }
-}
+} */
 /*end of intro*/
