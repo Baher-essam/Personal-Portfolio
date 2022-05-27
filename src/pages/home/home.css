@@ -1,4 +1,4 @@
-/*start of intro*/
+/*start of intro sectionh*/
 .intro
 {
     background: var( --intro-bg-color );
@@ -222,14 +222,16 @@
     color: transparent;
   }
 }
+/*end of intro section*/
 
+/*start of contact section*/
 #contact{
-  padding: 5% 0;
+  padding: 5% 0 2%;
 }
 #contact .section-title h1::after {content: 'F';}
 .contact-form {
     background-color: var(--form-bg-color);
-    padding: 5%;
+    padding: 2% 5%;
     width: 60%;
     margin: auto;
     border-radius: 5px;
@@ -277,6 +279,7 @@ textarea , textarea.form-control
 {
     position: relative;
     overflow: hidden;
+    padding: 1% 0;
 }
 .form  input
 {

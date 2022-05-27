@@ -69,7 +69,7 @@ const Home = () => {
             {/*projects seciton*/}
             <Projects/>
             {/*contact seciton*/}
-            <section id="contact" className="mb40 mt70 ">
+            <section id="contact">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-12  text-capitalize text-center">
@@ -82,9 +82,9 @@ const Home = () => {
                         </div>
                 
                         <div className="col-sm-12">
-                            <div className="contact-form  mt50">
-                                <form className="form" id="myForm">
-                                    <input type="hidden" name="form-name" value="contact"/>
+                            <div className="contact-form  mt-4" >
+                                <form className="form" id="myForm" data-netlify="true" method="POST" name="contact-form">
+                                    <input type="hidden" name="form-name" value="contact-form"/>
                                     <div className="form-group">
                                         <input type="text" name="name" required  className="form-control"/>
                                         <label htmlFor="name" className="label-content">
@@ -105,10 +105,10 @@ const Home = () => {
                                     </div>
                                     <div className="form-group">
                                     <label htmlFor="message" className="message">Message</label>
-                                    <textarea name="message" rows="4" placeholder="Enter Message..." className="form-control"></textarea>
+                                    <textarea name="message" rows="4" placeholder="Enter message..." className="form-control"></textarea>
                                     </div>
                                     <div className="text-center">
-                                        <button type="submit" className="text-capitalize px60 main-btn mt10 py5">Send Message</button>
+                                        <button type="submit" className="main-btn mt-3 py-1 px-4 d-inline-flex">Send message <span></span></button>
                                     </div>
                                 </form> 
                             </div>
