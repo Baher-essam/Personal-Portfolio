@@ -160,7 +160,7 @@ const projectsData =[
         "name" : "Igroup",
         "status" : "live",
         "category" : "freelance",
-        "imageAlt" : "macline project",
+        "imageAlt" : "Igroup project",
         "url" : 'http://igroupegypt.com/',
       }
 

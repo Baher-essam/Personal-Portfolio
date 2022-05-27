@@ -10,7 +10,7 @@ const FooterComponent = () => {
                     {aboutData.Social.map( social =>(
                         <li key={social.id}>
                             <a href={social.url}  rel="noreferrer noopener" target="blank">
-                                <img src={social.photo} alt={social.name} />
+                                <img src={social.photo} alt={social.name} width="25" height="30"/>
                             </a>
                         </li>
                     ))}  
