@@ -225,6 +225,228 @@
 }
 /*end of intro section*/
 
+/*start of about me section*/
+#aboutMe { padding: 10% 0 5%; overflow: hidden; position: relative;}
+#aboutMe .section-title h1::after {content:'A';}
+.about-me-photo 
+{
+    width: 65%;
+    margin: auto;
+    position: relative;
+    box-shadow: 0px 4px 0px #c004d986;
+    border-bottom-left-radius: 25%;
+}
+.about-me-photo  img {
+    transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -ms-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;   
+}
+#aboutMe .dots
+{
+    position: absolute;
+    margin: auto;
+    z-index: -1;
+    opacity: 0.15;
+    bottom: 30%;
+    right: 15%;
+    width: 8%;
+    filter:var(--fliter);
+    -webkit-filter:var(--fliter);
+}
+.blob, .blob1{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.blob{
+    z-index: -1;
+    transform: scale(1.7) rotate(0);
+    -webkit-transform: scale(1.7) rotate(0);
+    -moz-transform: scale(1.7) rotate(0);
+    -ms-transform: scale(1.7) rotate(0);
+    -o-transform: scale(1.7) rotate(0);
+    opacity: 0.95;
+}
+.blob1{
+    z-index: -2;
+    opacity: 0.5;
+    top: 10%;
+    left: 10%;
+    animation: blob  5s infinite ease ;
+    -webkit-animation: blob  5s infinite ease ;
+}
+@keyframes blob {
+    0%, 100%{
+        transform: rotate(-5deg) scale(1.7);
+        -webkit-transform: rotate(-5deg) scale(1.7);
+        -moz-transform: rotate(-5deg) scale(1.7);
+        -ms-transform: rotate(-5deg) scale(1.7);
+        -o-transform: rotate(-5deg) scale(1.7);
+    }
+    50%{
+        transform: rotate(0deg) scale(1.65);
+        -webkit-transform: rotate(0deg) scale(1.65);
+        -moz-transform: rotate(0deg) scale(1.65);
+        -ms-transform: rotate(0deg) scale(1.65);
+        -o-transform: rotate(0deg) scale(1.65);
+    } 
+}
+.blob2{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin:auto;
+    z-index: -2;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    opacity: 0.4;
+}
+#aboutMeData h2 span , .contact-title h1 span  {position: relative;}
+#aboutMeData h2 span:nth-child(1) svg , .contact-title h1 span svg
+{
+    position: absolute;
+    top: -4%;
+    left: -21px;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    z-index: -1;
+}
+#aboutMeData p ,#aboutMeData  social a{color: var(--gray-light);}
+#aboutMeData > p {font-size: 16px;}
+#aboutMeData li { color: var(--white); }
+#aboutMeData li svg  , #aboutMeData li svg path{fill:var(--white);}
+#aboutMeData a:hover { text-decoration: none;}
+.social-data li {display: inline; padding:0 10px; opacity: 0.6;}
+.social-data li:hover{opacity: 1;}
+.personal ul {
+    font-size: 14px;
+    font-weight: 200;
+}
+.px-sm-4 {
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+}
+/*end of about me section*/
+
+/*start of services*/
+.services {
+  overflow: hidden; 
+  /* clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%); */
+  background-color: var(--services-bg-color);
+  padding: 5% 0;
+  position: relative;
+}
+.services .section-title h1::after {content:'S';}
+.services-content 
+{
+  position: relative;
+  margin: 10px;
+  background-color: var(--intro-bg-color);
+  transform-style: preserve-3d;
+  padding: 20px;
+}
+/*my services conetent*/
+.services-content::before , .services-content::after
+{
+  position: absolute;
+  font-size: 30px;
+  color: var(--white);
+  opacity: 0;
+  transition: all 0.5s ease 0.3s;
+  -webkit-transition: all 0.5s ease 0.3s;
+  -moz-transition: all 0.5s ease 0.3s;
+  -ms-transition: all 0.5s ease 0.3s;
+  -o-transition: all 0.5s ease 0.3s;
+}
+.services-content::before 
+{
+  content: 'MY';
+  top: 15px;
+  left: -80px;
+}
+.services-content::after 
+{
+  content: 'SERVICE';
+  bottom: 15px;
+  right: -80px;
+}
+.services-content:hover::before , .services-content:hover::after { opacity: 0.03;}
+.services-content:hover::before  {left: 15px;}
+.services-content:hover::after {right: 15px;}
+/*my services conetent*/
+.services-content h4 
+{
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--white);
+  width: 100%;
+  transition: 0.5s;
+  transform: translate3d(0, 0, 40px);
+  -webkit-transform: translate3d(0, 0, 40px);
+  -moz-transform: translate3d(0, 0, 40px);
+  -ms-transform: translate3d(0, 0, 40px);
+  -o-transform: translate3d(0, 0, 40px);
+  opacity: .5;
+  font-weight: 300;
+  font-size: 18px;
+}
+.services-title p {font-weight: 300; font-size: 14px; opacity: 0.9;}
+.service-img {padding: 3% 0;}
+
+.service-img
+{
+  position: relative;
+  margin: 0 auto;
+  width: 30%;
+  height: auto;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  z-index: -1;
+  filter: drop-shadow(0 0 20px #c004d977);
+  -webkit-filter: drop-shadow(0 0 20px #c004d977);
+}
+.services-content:hover h4 
+{
+  transform: translate3d(0, 0, 60px);
+  -webkit-transform: translate3d(0, 0, 60px);
+  -moz-transform: translate3d(0, 0, 60px);
+  -ms-transform: translate3d(0, 0, 60px);
+  -o-transform: translate3d(0, 0, 60px);
+  opacity: 1;
+}
+.services-content:hover .service-img
+{
+  width: 35%;
+  transform: translate3d(0, -10px, 50px);
+  -webkit-transform: translate3d(0, -10px, 50px);
+  -moz-transform: translate3d(0, -10px, 50px);
+  -ms-transform: translate3d(0, -10px, 50px);
+  -o-transform: translate3d(0, -10px, 50px);
+}
+.services-content:hover .service-data
+{
+  transform: translate3d(0, 0, 30px);
+  -webkit-transform: translate3d(0, 0, 30px);
+  -moz-transform: translate3d(0, 0, 30px);
+  -ms-transform: translate3d(0, 0, 30px);
+  -o-transform: translate3d(0, 0, 30px);
+}
+/*end of services*/
+
+
 /*start of contact section*/
 #contact{
   padding: 5% 0 2%;

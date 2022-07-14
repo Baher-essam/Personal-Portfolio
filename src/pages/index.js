@@ -1,11 +1,7 @@
-import React from 'react'
+import Home from './home/home'
+import About from './about/about'
+import Projects from './projects/projects'
+import Service from './Services/services'
+import Contact from './contact/contact'
 
-const Dashboard = () => {
-    return (
-        <div>
-            hello from dashboard mainpage
-        </div>
-    )
-}
-
-export default Dashboard;
+export {Home, About, Projects, Service, Contact}
