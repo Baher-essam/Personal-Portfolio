@@ -8,7 +8,7 @@ import FooterComponent from './Components/Footer';
 
 import Home from './pages/home/home';
 
-// import About from './pages/about/about';
+import About from './pages/about/about';
 import Projects from './pages/projects/projects';
 // import Service from './pages/services/services';
 import pageNotFound from './pages/404.js';
@@ -21,7 +21,7 @@ function App() {
             <HeaderComponent/>
             <Switch>
               <Route path="/" exact component={Home}/>
-              {/* <Route path="/about" component={About}/> */}
+              <Route path="/about" component={About}/>
               {/* <Route path="/projects" component={Projects}/> */}
               {/* <Route path="/service" component={Service}/> */}
               <Route path="/thankyou" component={thankYou}/>
