@@ -171,7 +171,7 @@ const projectsData =[
         "image" : project13,
         "tech" : [ "Html5", "CSS3", "react-bootstrap", "Reactjs", 'JSX', 'PWA'],
         "name" : "Dr.Ashraf El-Kelany",
-        "status" : "building",
+        "status" : "live",
         "category" : "freelance",
         "imageAlt" : "Dr.ashraf El-kelany project",
         "url" : 'https://ashrafelkelany.com',
