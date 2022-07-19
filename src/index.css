@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 :root{
   /*color*/
   --primary-color1: #c004d9;
@@ -25,6 +25,8 @@
 
   --btn-bg-color:#128af3;
   --btn-bg-color1:#4CB1F7;
+  --btn-bg-color2:#8e6c924a;
+  --btn-bg-color2-hoverd:#8e6c92;
   --box-shadow-color1: #c004d977;
   /*filters*/
   --fliter:invert(1);
@@ -182,32 +184,30 @@ a , button {color: var(--white); text-decoration: none;}
 a:hover {text-decoration: none;color: var(--white);}
 /*intro, aboutme*/
 .main-btn{
-  background-color: var(--btn-bg-color);
-  background: linear-gradient(90deg, #4CB1F7 0%, #138AF2 40%);
+  background-color: var(--btn-bg-color2);
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  transition: all ease-in 0.8s;
-  -webkit-transition: all ease-in 0.8s;
-  -moz-transition: all ease-in 0.8s;
-  -ms-transition: all ease-in 0.8s;
-  -o-transition: all ease-in 0.8s;
+  transition: background-color ease-in 0.2s;
+  -webkit-transition: background-color ease-in 0.2s;
+  -moz-transition: background-color ease-in 0.2s;
+  -ms-transition: background-color ease-in 0.2s;
+  -o-transition: background-color ease-in 0.2s;
   color: var(--white);
   font-weight: 300;
 }
 .main-btn:hover
 {
-  background: linear-gradient(270deg, #4CB1F7 0%, #138AF2 40%);
+  background-color: var(--btn-bg-color2-hoverd);
   text-decoration: none;
-  color: var(--white);
 }
 #root {background-color: var(--main-bg-color) !important; position: relative; z-index: 0;}
 .container-fluid {padding: 0;}
 
 /*start of all sections title*/
-.section-title h1 {position:relative; color: var(--white);}
+.section-title h1 {position:relative; color: var(--white); margin-bottom: 1%;}
 /*overlay letter at section title*/
 .section-title h1::after
 {
@@ -217,7 +217,7 @@ a:hover {text-decoration: none;color: var(--white);}
   right:0;
   margin :auto;
   opacity: 0.1;
-  font-size: 80px;
+  font-size: calc(3rem + 2vw);
   bottom: 0;
   color: var(--primary-color6);
 }
@@ -274,6 +274,7 @@ header .bg{
     opacity: 0;
     transform-origin: 150% -50%;
 }
+/*menu*/
 header .bg.active
 {
     opacity: 1;
@@ -402,6 +403,11 @@ footer p {font-size: 12px;}
 footer p span:last-child {color: var(--primary-color4);}
 footer svg path {fill:#D7443E;}
 /*end  of footer*/
+/*start of 404 page*/
+#PageNotFound{
+  width: 100%;
+  height: 100vh;
+}
 
 /*start of mediaquery*/
 @media screen and  (min-width: 1400px){
@@ -435,18 +441,6 @@ footer svg path {fill:#D7443E;}
         font-size: 25px;
         font-weight: 300;
     }
-    /*start of intro*/
-    /* .intro
-    {
-        border-radius: 0% 0% 0% 40%/0 0 0 20%;
-        -webkit-border-radius: 0% 0% 0% 40%/0 0 0 20%;
-        -moz-border-radius: 0% 0% 0% 40%/0 0 0 20%;
-        -ms-border-radius: 0% 0% 0% 40%/0 0 0 20%;
-        -o-border-radius: 0% 0% 0% 40%/0 0 0 20%;
-        background-size: 200% 100%;
-        padding: 15% 0;
-    } */
-    /*end of intro*/
     /*about me */
     #aboutMe .dots { bottom: 15%; width: 20%;}
     .experince-work {
@@ -457,8 +451,6 @@ footer svg path {fill:#D7443E;}
     .experince-data-content::after  {left: 3%;}
     .experince-dot  {left: 5.5%;}
     .experince-data-content .col-12:nth-child(odd) .experince-time ,   .experince-data-content .col-12:nth-child(even) .experince-time {left: 15%; right: auto; top: -12%; padding: 5px 35px;}
-    /*services section*/
-    .services{ clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%); }
 }
 @media  screen and (max-width: 426px) {
     /*about me*/
@@ -466,6 +458,7 @@ footer svg path {fill:#D7443E;}
     .about-me-photo {width: 80%;}
      #aboutMeData{ width: 95%;}
     .text-sm-center{text-align: center;}
+    .project-content{min-height: auto;}
 }
 
 @media  screen and (max-width: 391px) {

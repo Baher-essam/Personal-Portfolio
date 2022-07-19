@@ -9,8 +9,11 @@ import Projects from '../projects/projects'
 /*about section data*/
 import {aboutData, servicesData } from '../../fake-database/index'
 import dots from '../../Assets/badges/dots.svg'
-import bg1 from '../../Assets/badges/blob.svg'
-import bg3 from '../../Assets/badges/blob1.svg'
+import blob1 from '../../Assets/badges/blob.svg'
+import blob2 from '../../Assets/badges/blob1.svg'
+import shape3 from '../../Assets/images/shape-3.png'
+import shape1 from '../../Assets/images/shape-1.png'
+import shape2 from '../../Assets/images/shape-7.png'
 import arrow from '../../Assets/badges/arrow.svg'
 
 
@@ -32,9 +35,9 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="intro-text text-white text-center" >
-                            <p className='intro-text-fixed mb-0'>
-                                <span>Hi,</span>I'm <h1 className='glitch'  data-content={aboutData.name}>{aboutData.name}</h1>
-                            </p>
+                            <h1 className='intro-text-fixed mb-0'>
+                                <span>Hi,</span><span>I'm </span><span className='glitch'  data-content={aboutData.name}>{aboutData.name}</span>
+                            </h1>
                             <p className='intro-text-changing'>I'm a 
                                 <Typical
                                     loop={Infinity}
@@ -68,7 +71,7 @@ const Home = () => {
             </section>
             {/*end of intro seciton*/}
             {/*About seciton*/}
-            <section id="aboutMe" className="mt90">
+            <section id="aboutMe" className="about">
                     <div className="container">
                         <div className="row text-white align-items-center">
                             <div className="col-sm-12 pb-5">
@@ -81,11 +84,14 @@ const Home = () => {
                                     <div>
                                         <picture>
                                             <source srcSet={aboutData.photoWebp} alt={aboutData.photoAlt} className="img-fluid"/>
-                                            <img src={aboutData.photo} className="img-fluid" alt="personal photo" width={353} height={591}/>
+                                            <img src={aboutData.photo} className="img-fluid" alt="personal photo" width={353} height={426}/>
                                         </picture>
                                     </div>
-                                    <img src={bg1} className="blob" alt="blob background" width={353} height={426}/>
-                                    <img src={bg3} className="blob1" alt="blob1 background" width={353} height={426} />
+                                    <img src={blob1} className="blob blob1" alt="blob1 background" width={353} height={426}/>
+                                    <img src={blob2} className="blob blob2" alt="blob2 background" width={353} height={426} />
+                                    <img src={shape1} className="shape1" alt="shape1" width={30} height={30} />
+                                    <img src={shape3} className="shape3" alt="shape3" width={30} height={30} />
+                                    <img src={shape2} className="shape2" alt="shape2" width={30} height={30} />
                                     {/* <img src={bg4} className="blob2" alt="bg4 background"/> */}
                                 </div>
                             </div>
@@ -109,20 +115,20 @@ const Home = () => {
                                             </li>
                                             <li className='my-2'>
                                                 <span><img src={aboutData.emailImg} alt="phone-logo" width={25} height={25}/></span>
-                                                <span className='ms-2'><a href="mailto:baher.essam@gmail.com">{aboutData.email}</a></span>
+                                                <span className='ms-2'><a href={"mailto:"+aboutData.email}>{aboutData.email}</a></span>
                                             </li>
-                                            <li className='d-md-block d-none my-2'>
+                                            <li className='my-2'>
                                                 <span><img src={aboutData.phoneImg} alt="phone-logo" width={25} height={25}/></span> 
-                                                <span className='ms-2'><a>{aboutData.phone}</a></span>
-                                            </li>
-                                            <li className='d-md-none d-block my-2'>
-                                                <span><img src={aboutData.phoneImg} alt="phone-logo" width={25} height={25}/></span> 
-                                                <span className='ms-2'><a href="tel:01146786272">{aboutData.phone}</a></span>
+                                                <span className='ms-2'><a href={"tel:"+aboutData.phone}>(+20) {aboutData.phone}</a></span>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="download-cv">
-                                        <NavLink to="/about" className="text-uppercase main-btn py-1 px-4 d-inline-flex">see more <span><img src={arrow} alt="arrow" width={15} height={10}/></span></NavLink>
+                                    <div className="aboutMeData-btn">
+                                        <NavLink to="/about">
+                                            <div className="text-uppercase main-btn py-1 px-4 d-inline-flex">
+                                                See More <span><img src={arrow} alt="arrow" width={15} height={10}/></span>
+                                            </div>
+                                        </NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -140,15 +146,15 @@ const Home = () => {
                             </div>
                         </div>
                         {servicesData.map( service =>(
-                            <div className="col-lg-3 col-sm-6 mb-5 mt-1" key={service.id}>
+                            <div className="col-lg-3 col-sm-6 mb-2 mt-1" key={service.id}>
                                 <div className="services-content service-animate">
                                     <div className="service-img">
                                         <div className="service-img-color">
-                                            <img src={service.image} className="img-fluid" alt={service.imgAlt} width={68.5} height={68.5}/>
+                                            <img src={service.image} className="img-fluid w-50" alt={service.imgAlt} width={68.5} height={68.5}/>
                                         </div>
                                     </div>
                                     <div className="service-text pt-1">
-                                        <h4 className="text-capitalize ">{service.name}</h4>
+                                        <p className="text-capitalize mb-0">{service.name}</p>
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +165,7 @@ const Home = () => {
             {/*projects seciton*/}
             <Projects/>
             {/*contact seciton*/}
-            <section id="contact">
+            <section id="contact" className='contact'>
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-12  text-capitalize text-center">
@@ -173,28 +179,28 @@ const Home = () => {
                 
                         <div className="col-sm-12">
                             <div className="contact-form  mt-4" >
-                                <form className="form" id="myForm" data-netlify="true" method="POST" name="contact-form">
+                                <form className="form" id="myForm" data-netlify="true" method="POST" action="../thankyou" name="contact-form">
                                     <input type="hidden" name="form-name" value="contact-form"/>
                                     <div className="form-group">
-                                        <input type="text" name="name" required  className="form-control"/>
+                                        <input id="name" type="text" name="name" required  className="form-control"/>
                                         <label htmlFor="name" className="label-content">
                                             <span className="span-data">Name</span>
                                         </label>
                                     </div>
                                     <div className="form-group">
-                                        <input type="email" name="email" required  className="form-control"/>
+                                        <input id='email' type="email" name="email" required  className="form-control"/>
                                         <label htmlFor="email" className="label-content">
                                             <span className="span-data">Email</span>
                                         </label>
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" name="number" required  className="form-control"/>
+                                        <input id='number' type="text" name="number" required  className="form-control"/>
                                         <label htmlFor="number" className="label-content">
                                             <span className="span-data">Number</span>
                                         </label>
                                     </div>
                                     <div className="form-group">
-                                    <label htmlFor="message" className="message">Message</label>
+                                    <label id='message' htmlFor="message" className="message">Message</label>
                                     <textarea name="message" rows="4" placeholder="Enter message..." className="form-control"></textarea>
                                     </div>
                                     <div className="text-center">
