@@ -12,7 +12,7 @@ import phoneImg from '../../Assets/badges/phone.svg'
 const aboutData = {
         "name" : "Baher Essam",
         "adderss" : "Cairo, Egypt.",
-        "phone" : "(+02) 01146786272",
+        "phone" : "01146786272",
         'email': 'contact@baher.essam.com',
         "adderssImg" : adderssImg,
         "phoneImg" : phoneImg,
