@@ -5,6 +5,7 @@ import './index';
 
 import HeaderComponent from './Components/Header';
 import FooterComponent from './Components/Footer';
+import CursorComponent from "./Components/Cursor";
 
 import Home from './pages/home/home';
 import About from './pages/about/about';
@@ -17,6 +18,7 @@ function App() {
   return (
       <BrowserRouter>
          <div className="App">
+          <CursorComponent/>
             <HeaderComponent/>
             <Switch>
               <Route path="/" exact component={Home}/>

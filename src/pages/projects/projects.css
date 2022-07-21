@@ -1,19 +1,27 @@
 /*start of projects*/
 #projects .section-title h1::after {content:'P';}
 .project {padding: 10px;}
-.projects-list li 
-{
+.projects-list button {
+    border: none;
+    background-color: transparent;
+    opacity: 0.8;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+.projects-list button:hover{opacity: 1;}
+.projects-list button.active{
+        opacity: 1;
+        color: var(--primary-color7);
+        font-weight: 400;
+}
+.projects-list li {
     display: inline;
     padding: 0 5px;
     cursor: pointer;
-    opacity: 0.8;
     font-weight: 300;
-}
-.projects-list li.active
-{
-    opacity: 1;
-    color: var(--primary-color7);
-    font-weight: 400;
 }
 .project-deatils{position: relative; font-family: monospace; overflow: hidden;}
 .project-img {overflow: hidden;}

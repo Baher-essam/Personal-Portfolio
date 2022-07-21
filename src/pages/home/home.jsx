@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { NavLink } from 'react-router-dom'//for about section button
 /*intro section data */
 import Typical from 'react-typical'
@@ -6,6 +6,7 @@ import './home.css'
 import bg2 from '../../Assets/images/shape4.gif'
 /*services and projects section data*/
 import Projects from '../projects/projects'
+import { MouseContext } from "../../context/mouseContext" //cursor 
 /*about section data*/
 import {aboutData, servicesData } from '../../fake-database/index'
 import dots from '../../Assets/badges/dots.svg'
@@ -19,6 +20,7 @@ import arrow from '../../Assets/badges/arrow.svg'
 
 
 const Home = () => {
+    const {  cursorChangeHandler } = useContext(MouseContext); //cursor
     return (
         <main>
             {/*start of intro seciton*/}
@@ -29,7 +31,7 @@ const Home = () => {
                             <img src={bg2} alt="intro image" className="img-fluid intro-img1" width={200} height={200}/>
                             <div className="intro-img2">
                                 <picture>
-                                    <source srcSet={aboutData.introImgwebp} alt={aboutData.introImgAlt} className="img-fluid"/>
+                                    <source srcSet={aboutData.introImgwebp} className="img-fluid"/>
                                     <img src={aboutData.introImg} alt={aboutData.introImgAlt} className="img-fluid" width={184} height={184}/>
                                 </picture>
                             </div>
@@ -56,15 +58,34 @@ const Home = () => {
                                     <ul className="list-unstyled social-data mt-1">   
                                     {aboutData.Social.map( social =>(
                                         <li key={social.id}>
-                                            <a href={social.url}  rel="noreferrer noopener" target="blank">
+                                            <a
+                                                href={social.url}
+                                                rel="noreferrer noopener"
+                                                target="_blank"
+                                                onMouseEnter={() => cursorChangeHandler("hovered")}
+                                                onMouseLeave={() => cursorChangeHandler("")}
+                                            >
                                                 <img src={social.photo} alt={social.name} width={25} height={30} />
                                             </a>
                                         </li>
                                     ))}  
                                     </ul>
                                 </div>
-                            <a href="https://drive.google.com/file/d/1NKxVa9dyyU4YVLkWI_-IVWPGz3Xj_p0t/view?usp=drivesdk"  rel="noreferrer noopener" target="_blank" className="text-capitalize mx-2 px-3 main-btn mt-5 py-1">show resume</a>
-                            <a href="#contact"  rel="noreferrer noopener" className="text-capitalize px-3 mx-2 main-btn mt-5 py-1">Hire me</a>
+                            <a 
+                                href="https://drive.google.com/file/d/1VVVo-vyypbu0sdWJyJ268Gsfb1kWuxG_/view?usp=sharing"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                                className="text-capitalize mx-2 px-3 main-btn mt-5 py-1"
+                                onMouseEnter={() => cursorChangeHandler("hovered")}
+                                onMouseLeave={() => cursorChangeHandler("")}
+                            >show resume</a>
+                            <a
+                                href="#contact"
+                                rel="noreferrer noopener"
+                                className="text-capitalize px-3 mx-2 main-btn mt-5 py-1"
+                                onMouseEnter={() => cursorChangeHandler("hovered")}
+                                onMouseLeave={() => cursorChangeHandler("")}
+                            >Hire me</a>
                         </div>
                     </div>
                 </div>
@@ -83,7 +104,7 @@ const Home = () => {
                                 <div className="about-me-photo">
                                     <div>
                                         <picture>
-                                            <source srcSet={aboutData.photoWebp} alt={aboutData.photoAlt} className="img-fluid"/>
+                                            <source srcSet={aboutData.photoWebp}  className="img-fluid"/>
                                             <img src={aboutData.photo} className="img-fluid" alt="personal photo" width={353} height={426}/>
                                         </picture>
                                     </div>
@@ -96,7 +117,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <img src={dots} className="dots" alt="dots" width={96} height={96}/>
-                            <div className=" col-md-6 col-sm-12 my-3 px-sm-4">
+                            <div className=" col-md-6 col-sm-12 my-3 px-sm-4" >
                                 <div id="aboutMeData" className="aboutMeData">
                                     <h2>
                                         <span>
@@ -115,16 +136,36 @@ const Home = () => {
                                             </li>
                                             <li className='my-2'>
                                                 <span><img src={aboutData.emailImg} alt="phone-logo" width={25} height={25}/></span>
-                                                <span className='ms-2'><a href={"mailto:"+aboutData.email}>{aboutData.email}</a></span>
+                                                <span className='ms-2'>
+                                                    <a 
+                                                        href={"mailto:"+aboutData.email}
+                                                        onMouseEnter={() => cursorChangeHandler("hovered")}
+                                                        onMouseLeave={() => cursorChangeHandler("")}
+                                                    >
+                                                        {aboutData.email}
+                                                    </a>
+                                                </span>
                                             </li>
                                             <li className='my-2'>
                                                 <span><img src={aboutData.phoneImg} alt="phone-logo" width={25} height={25}/></span> 
-                                                <span className='ms-2'><a href={"tel:"+aboutData.phone}>(+20) {aboutData.phone}</a></span>
+                                                <span className='ms-2'>
+                                                    <a 
+                                                        href={"tel:"+aboutData.phone}
+                                                        onMouseEnter={() => cursorChangeHandler("hovered")}
+                                                        onMouseLeave={() => cursorChangeHandler("")}
+                                                    >
+                                                        (+20) {aboutData.phone}
+                                                    </a>
+                                                </span>
                                             </li>
                                         </ul>
                                     </div>
                                     <div className="aboutMeData-btn">
-                                        <NavLink to="/about">
+                                        <NavLink 
+                                        to="/about"
+                                        onMouseEnter={() => cursorChangeHandler("hovered")}
+                                        onMouseLeave={() => cursorChangeHandler("")}
+                                        >
                                             <div className="text-uppercase main-btn py-1 px-4 d-inline-flex">
                                                 See More <span><img src={arrow} alt="arrow" width={15} height={10}/></span>
                                             </div>
@@ -182,29 +223,61 @@ const Home = () => {
                                 <form className="form" id="myForm" data-netlify="true" method="POST" action="../thankyou" name="contact-form">
                                     <input type="hidden" name="form-name" value="contact-form"/>
                                     <div className="form-group">
-                                        <input id="name" type="text" name="name" required  className="form-control"/>
+                                        <input 
+                                            id="name" type="text" 
+                                            name="name" required  className="form-control"
+                                            onMouseEnter={() => cursorChangeHandler("hovered")}
+                                            onMouseLeave={() => cursorChangeHandler("")}
+                                        />
                                         <label htmlFor="name" className="label-content">
                                             <span className="span-data">Name</span>
                                         </label>
                                     </div>
                                     <div className="form-group">
-                                        <input id='email' type="email" name="email" required  className="form-control"/>
+                                        <input 
+                                            id='email'
+                                            type="email" name="email" required  
+                                            className="form-control"
+                                            onMouseEnter={() => cursorChangeHandler("hovered")}
+                                            onMouseLeave={() => cursorChangeHandler("")}
+                                            />
                                         <label htmlFor="email" className="label-content">
                                             <span className="span-data">Email</span>
                                         </label>
                                     </div>
                                     <div className="form-group">
-                                        <input id='number' type="text" name="number" required  className="form-control"/>
+                                        <input 
+                                            id='number'
+                                            type="text"
+                                            name="number" 
+                                            required  className="form-control"
+                                            onMouseEnter={() => cursorChangeHandler("hovered")}
+                                            onMouseLeave={() => cursorChangeHandler("")}
+                                        />
                                         <label htmlFor="number" className="label-content">
                                             <span className="span-data">Number</span>
                                         </label>
                                     </div>
                                     <div className="form-group">
                                     <label id='message' htmlFor="message" className="message">Message</label>
-                                    <textarea name="message" rows="4" placeholder="Enter message..." className="form-control"></textarea>
+                                    <textarea 
+                                        name="message"
+                                        rows="4"
+                                        placeholder="Enter message..."
+                                        className="form-control"
+                                        onMouseEnter={() => cursorChangeHandler("hovered")}
+                                        onMouseLeave={() => cursorChangeHandler("")}
+                                    ></textarea>
                                     </div>
                                     <div className="text-center">
-                                        <button type="submit" className="main-btn mt-3 py-1 px-4 d-inline-flex">Send message <span></span></button>
+                                        <button 
+                                            type="submit"
+                                            className="main-btn mt-3 py-1 px-4 d-inline-flex"
+                                            onMouseEnter={() => cursorChangeHandler("hovered")}
+                                            onMouseLeave={() => cursorChangeHandler("")}
+                                        >
+                                            Send message <span></span>
+                                        </button>
                                     </div>
                                 </form> 
                             </div>

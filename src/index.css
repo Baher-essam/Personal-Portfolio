@@ -9,8 +9,7 @@
   --primary-color6: #e265ae;
   --primary-color7: #138AF2;
   --svg-color1:#BA68C8;
-  --Cyan :#65e2d9;
-  --blue: #339ecc;
+  /* --blue: #339ecc; */
   --light-red:#ff4242;
   --gray-light: #aaacaf;
   --white:#fff;
@@ -32,15 +31,66 @@
   --fliter:invert(1);
   --refliter:invert(0);
 }
+.dot , .ring{
+  position: fixed;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+.ring {
+
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    -webkit-transition-duration: 100ms;
+    transition-duration: 100ms;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    will-change: width, height, transform, background-color;
+    mix-blend-mode: overlay;
+    border: 1px solid #fff;
+  }
+  
+  .dot {
+    top: 50%;
+    left: 50%;
+    background-color: #ec2026;
+    height: 5px;
+    width: 5px;
+}
+  
+  .ring.hovered {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: #ffffffce;
+  }
+  
+  .dot.hovered {
+    width: 4px;
+    height: 4px;
+  }
+  
+/*tablet*/
+@media only screen and (max-width: 768px) {
+/*hide cursor at tablets and mobil screens*/
+  .dot , .ring{
+    display: none;
+    opacity: 0;
+  }
+}
+
 ::selection { background-color:#5A13F2; color:var(--white);}
 /*start of light mode*/
 .lightMode{
   /*color*/--white:#000;
-  /*backgroundcolors*/--navbar-bg: #00000030;
+  /*backgroundcolors*/
+  --navbar-bg: #00000030;
   --main-bg-color: #f8f8f8;
-  --intro-bg-color: #f0f0f0;
-  --services-bg-color: #dfdfdf;
-  --footer-bg-color: #a5a5a5;
+  --intro-bg-color: #fff;
+  --services-bg-color: #f1f1f1;
   --form-bg-color:#cfcfcf;
   /*filters*/
   --fliter:invert(0);
@@ -170,10 +220,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none !important;
 }
 html{scroll-behavior: smooth;}
 body{
   font-family: 'Poppins', sans-serif;
+}
+#root > .App{
+  background-color: var(--main-bg-color);
 }
 h1{font-weight: 800;}
 h2{font-weight: 700;}
@@ -203,7 +257,7 @@ a:hover {text-decoration: none;color: var(--white);}
   background-color: var(--btn-bg-color2-hoverd);
   text-decoration: none;
 }
-#root {background-color: var(--main-bg-color) !important; position: relative; z-index: 0;}
+#root { position: relative; z-index: 0;}
 .container-fluid {padding: 0;}
 
 /*start of all sections title*/

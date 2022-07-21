@@ -1,10 +1,14 @@
-import React , {useState, useEffect} from 'react';
+import React , {useState, useEffect, useContext} from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 import './projects.css'
 import {projectsData} from '../../fake-database/index'
-
+import { MouseContext } from "../../context/mouseContext" //cursor 
+// import { disable } from 'workbox-navigation-preload';
 
 const Projects = () => {
+
+    const {  cursorChangeHandler } = useContext(MouseContext);//cursor
+
     const [category, setCategory] = useState('all');
     const [filterdImages, setFilterdImages] = useState([]);
 
@@ -13,8 +17,13 @@ const Projects = () => {
             category === 'all' ? setFilterdImages(projectsData) : setFilterdImages(projectsData.filter(project => project.category === category))}, 
             [category]
         );
-
-
+        const listValues = [
+            { id: 1, category: "all"},
+            { id: 2, category: "self"},
+            { id: 3, category: "work"},
+            { id: 4, category: "freelance"}
+          ];
+        const [isActive, setActive] = React.useState(1);
 
     return(
         <section id="projects" className="py-5">
@@ -26,20 +35,32 @@ const Projects = () => {
                         </div>
                         <div className="projects-list my-4 text-white">
                             <ul className="list-unstyled">
-                                <CategoryBtn name="all"   handleSetCategory={setCategory}/>
-                                <CategoryBtn name="self"  handleSetCategory={setCategory}/>
-                                <CategoryBtn name="work"  handleSetCategory={setCategory}/>
-                                <CategoryBtn name="freelance"  handleSetCategory={setCategory}/>
+                                {listValues.map((listValue) => (
+                                    <button
+                                    key={listValue.id}
+                                    onMouseEnter={() => cursorChangeHandler("hovered")}
+                                    onMouseLeave={() => cursorChangeHandler("")}
+                                    className={isActive === listValue.id ? 'active' : ""  }
+                                    onClick={() => setActive(listValue.id)}
+                                    >
+                                        <CategoryBtn  name={listValue.category} handleSetCategory={setCategory} />
+                                    </button>
+                                ))}
                             </ul>
                         </div>
                     </Col>
                     {filterdImages.map(project =>(
                         <Col lg={4} md={6} sm={12} className={'project '+ project.category} key={project.id}>
-                            <a href={project.url}  rel="noreferrer noopener" >
+                            <a 
+                                href={project.url}
+                                rel="noreferrer noopener"
+                                onMouseEnter={() => cursorChangeHandler("hovered")}
+                                onMouseLeave={() => cursorChangeHandler("")}
+                            >
                                 <div className="project-deatils text-white">
                                     <div className={'project-img  '+project.status}>
                                         <picture>
-                                            <source srcSet={project.imageO} alt={project.imageAlt} />
+                                            <source srcSet={project.imageO}/>
                                             <img src={project.image} alt={project.imageAlt} className="img-fluid" width={500} height={180}/>
                                         </picture>
                                     </div>

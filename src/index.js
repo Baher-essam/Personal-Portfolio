@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import MouseContextProvider from "./context/mouseContext";
 import './index.css';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MouseContextProvider>
+      <App />
+    </MouseContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

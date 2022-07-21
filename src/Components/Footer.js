@@ -1,7 +1,8 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import {aboutData} from '../fake-database/index'
-
+import { MouseContext } from "../context/mouseContext" //cursor 
 const FooterComponent = () => {
+    const {  cursorChangeHandler } = useContext(MouseContext); //cursor
     return (
         <footer>
             <div className="container py-3 text-center text-white">
@@ -9,7 +10,12 @@ const FooterComponent = () => {
                     <ul className="list-unstyled social-data mt-1">   
                     {aboutData.Social.map( social =>(
                         <li key={social.id}>
-                            <a href={social.url}  rel="noreferrer noopener" target="blank">
+                            <a 
+                                href={social.url}
+                                rel="noreferrer noopener" target="_blank"
+                                onMouseEnter={() => cursorChangeHandler("hovered")}
+                                onMouseLeave={() => cursorChangeHandler("")}
+                            >
                                 <img src={social.photo} alt={social.name} width="25" height="30"/>
                             </a>
                         </li>
