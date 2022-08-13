@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useState,useEffect, useContext} from 'react'
 import { NavLink } from 'react-router-dom'//for about section button
 /*intro section data */
 import Typical from 'react-typical'
@@ -16,13 +16,36 @@ import shape3 from '../../Assets/images/shape-3.png'
 import shape1 from '../../Assets/images/shape-1.png'
 import shape2 from '../../Assets/images/shape-7.png'
 import arrow from '../../Assets/badges/arrow.svg'
+import moon from '../../Assets/badges/moon.svg'
+import sun from '../../Assets/badges/sun.svg'
 
+import LightModeSwitcherComponent from "../../Components/LightModeSwitcher";
 
 
 const Home = () => {
     const {  cursorChangeHandler } = useContext(MouseContext); //cursor
+    const [isActive, setActive] = useState("false");  //color mode switcher
+    const ToggleClass = () => {
+        setActive(!isActive); 
+        };
     return (
-        <main>
+        <main className={isActive ? `darkmode` : `lightMode time`}>
+              {/* <div 
+                id="lightModeToggle"
+                className={isActive ? `disabled` : `enabled`} 
+                onClick={ToggleClass}
+                onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseLeave={() => cursorChangeHandler("")}
+            >
+                <div className="lightModeRotate">
+                    <div className="moon">
+                        <img src={moon} className="img-fluid" alt="moon"/>
+                    </div>
+                    <div className="sun">
+                        <img src={sun} className="img-fluid" alt="sun"/>
+                    </div>
+                </div>
+            </div> */}
             {/*start of intro seciton*/}
             <section id="intro" className="intro d-flex justify-content-center align-items-center">
                 <div className="container">
@@ -33,6 +56,7 @@ const Home = () => {
                                 <picture>
                                     <source srcSet={aboutData.introImgwebp} className="img-fluid"/>
                                     <img src={aboutData.introImg} alt={aboutData.introImgAlt} className="img-fluid" width={184} height={184}/>
+                                
                                 </picture>
                             </div>
                         </div>
