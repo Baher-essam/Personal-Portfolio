@@ -17,10 +17,10 @@ const HeaderComponent = () => {
         ]
         const {  cursorChangeHandler } = useContext(MouseContext); //cursor
         return(
-                <header id="Header" className="Header">
+                <header id="Header" className="Header" >
                     <div className="bg bg2"></div>
                     <div className="bg bg3"></div>
-                    <Navbar bg="transparent" expand="lg" fixed='top'>
+                    <Navbar  expand="lg" fixed='top' className='bg-color'>
                         <Container>
                             <Navbar.Brand 
                                 as={NavLink} to="/" className="logo"

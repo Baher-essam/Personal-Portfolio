@@ -55,7 +55,7 @@
     min-height: 177px;
 }
 .project-name{
-    font-size: 22px;
+    font-size: calc(1rem + 0.35vw);
     font-weight: 600;
 }
 .project-description, 
