@@ -7,7 +7,7 @@ const about = () => {
         window.location.href="/"
       }, 2500);
     return (
-        <section id="singleAboutMe" className="text-center text-white d-flex justify-content-center align-items-center">
+        <main id="singleAboutMe" className="text-center text-white d-flex justify-content-center align-items-center">
             <div>
                 <h1 className='mb-3'>Page under creation <span><svg version="1.1" id="Capa_1" width="35" height="35" fill='#D7443E' xlinkHref="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 391.837 391.837">
@@ -17,7 +17,7 @@ const about = () => {
                 </svg></span></h1> 
                 <NavLink to={'/'} className="main-btn px-4 py-2 text-capitalize">return home</NavLink>
             </div>
-        </section>
+        </main>
     )
 }
 export default about
