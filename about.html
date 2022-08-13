@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Personal Portifolo Website for Baher Essam which shows my work and info">
+    <meta name="keyword" content="Web developer , Web designer, Portifolo, Portifolo Website, Baher, Baher Essam,baher-essam,Front-End Developer, باهر عصام, باهر">
+    <meta name="twitter:image:src" content="images/profile.jpg">
+    <meta name="twitter:site" content="https://www.baher-essam.com">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Baher Essam">
+    <meta name="twitter:description" content="personal website Portifolo which shows my work and contact info">
+
+    <meta property="og:url" content="https://www.baher-essam.com"/>
+    <meta property="og:site_name" content="Baher Essam"/>
+    <meta property="og:title" content="Baher Essam"/>
+    <meta property="og:description" content="personal website Portifolo which shows my work and contact info"/>
+  
+    <meta property="og:image" content="images/profile.jpg"/>
+    <meta property="og:image:secure_url" content="images/profile.jpg"/>
+    <meta property="og:image:width" content="1920"/>
+    <meta property="og:image:height" content="1280"/>
+    <meta property="og:image:alt" content="Front-End Developer & Freenlacer"/>
+    <meta name="google-site-verification" content="qVtUEHSwScaEaRCn0Gzu_erzuy4zvNRcL4mLZ2A8MKQ" />
+    <!--logos-->
+    <link rel="icon" href="Images/logo.png">
+    <!--plugsin-->
+    <link  rel="stylesheet" href="css/bootstrap.min.css">
+    <!--main css-->
+   <link rel="stylesheet" href="css/style.css">
+    <title>Baher Essam</title>
+    <style>
+            body{
+            height: 100vh;
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+
+        main  img {width: 100%; height: auto; margin: auto;}
+        footer{position: fixed; bottom: 0; left: 0; right: 0;}
+    </style>
+</head>
+<body class="">
+    <!-- start of header-->
+    <header id="Home">
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <!-- start of navbar-->
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <picture>
+                        <source srcset="images/logo.webp" type="">
+                        <source srcset="images/logo.png">
+                        <img src="images/logo.png" alt="logo" class="img-fluid">
+                    </picture>
+                </a>
+                <button class="navbar-toggler border-0 d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="collapse-group">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="bg bg1"></div>
+                    <div class="bg bg2"></div>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0 text-capitalize ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#aboutMe">About</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--end of navbar-->
+    </header>
+    <!--end of header-->
+
+    <!--start of main-->
+    <main>
+        <div id="underConstruction" class="text-center text-uppercase">
+            <div class="">
+                <img src="images/under-construction.svg" alt="">
+            </div>
+            <p class="mt20">This page is under construction</p>
+        </div>
+    </main>
+    <!--end of main-->
+
+    <!--start of footer-->
+    <footer>
+        <div class="container py-3 text-center text-white">
+            <p class="mb-0">Made with <span><svg version="1.1" id="Capa_1" width="12px" height="10px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 391.837 391.837" width="2%"  xml:space="preserve">
+                <g><path style="fill:#D7443E;" d="M285.257,35.528c58.743,0.286,106.294,47.836,106.58,106.58
+                        c0,107.624-195.918,214.204-195.918,214.204S0,248.165,0,142.108c0-58.862,47.717-106.58,106.58-106.58l0,0
+                        c36.032-0.281,69.718,17.842,89.339,48.065C215.674,53.517,249.273,35.441,285.257,35.528z"/></g>
+            </svg></span> by <span>Baher Essam</span> | Copyright &copy; 2021
+            </p>
+        </div>
+    </footer>
+    <!--end of footer-->
+
+    <!--start of scripts-->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+      let timer = () => {
+            setTimeout( ()=> { 
+            window.location.href = "/";
+            }, 2000);
+}
+    </script>
+    <!--end of scripts-->
+</body>
+</html>
