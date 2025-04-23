@@ -244,7 +244,7 @@ const Home = () => {
                 
                         <div className="col-sm-12">
                             <div className="contact-form  mt-4" >
-                                <form className="form" id="myForm" data-netlify="true" method="POST" action="../thankyou" name="contact-form">
+                                <form className="form" id="myForm"   netlify-honeypot="bot-field" data-netlify="true" method="POST" action="../thankyou" name="contact-form">
                                     <input type="hidden" name="form-name" value="contact-form"/>
                                     <div className="form-group">
                                         <input 
