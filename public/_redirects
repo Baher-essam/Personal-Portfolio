@@ -1,0 +1,6 @@
+# Redirect www to non-www
+https://www.baheressam.com/* https://baheressam.com/:splat 301!
+
+# Redirect http to https
+http://baheressam.com/* https://baheressam.com/:splat 301!
+http://www.baheressam.com/* https://baheressam.com/:splat 301!
