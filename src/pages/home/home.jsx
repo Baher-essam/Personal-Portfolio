@@ -1,7 +1,7 @@
 import React, {useState,useEffect, useContext} from 'react'
 import { NavLink } from 'react-router-dom'//for about section button
 /*intro section data */
-import Typical from 'react-typical'
+import Typewriter from 'typewriter-effect';
 import './home.css'
 import bg2 from '../../Assets/images/shape4.gif'
 /*services and projects section data*/
@@ -64,19 +64,19 @@ const Home = () => {
                             <h1 className='intro-text-fixed mb-0'>
                                 <span>Hi,</span><span>I'm </span><span className='glitch'  data-content={aboutData.name}>{aboutData.name}</span>
                             </h1>
-                            <p className='intro-text-changing'>I'm a 
-                                <Typical
-                                    loop={Infinity}
-                                    wrapper="i" //italic
-                                    steps={[
-                                        ' Web Developer',
-                                        2000,
-                                        ' Web Designer',
-                                        2000,
-                                        ' Freelancer',
-                                        2000
-                                    ]}
-                                />
+                            <p className="intro-text-changing">
+                                I'm a{' '}
+                                <i>
+                                    <Typewriter
+                                    options={{
+                                        strings: ['Web Developer', 'Web Designer', 'Freelancer'],
+                                        autoStart: true,
+                                        loop: true,
+                                        delay: 75,
+                                        deleteSpeed: 50,
+                                    }}
+                                    />
+                                </i>
                             </p>
                             <div className="social">
                                     <ul className="list-unstyled social-data mt-1">   
