@@ -9,6 +9,7 @@ import Projects from '../projects/projects'
 import { MouseContext } from "../../context/mouseContext" //cursor 
 /*about section data*/
 import {aboutData, servicesData } from '../../fake-database/index'
+import CanonicalHead from "../../Components/Helmet"
 import dots from '../../Assets/badges/dots.svg'
 import blob1 from '../../Assets/badges/blob.svg'
 import blob2 from '../../Assets/badges/blob1.svg'
@@ -30,6 +31,7 @@ const Home = () => {
         };
     return (
         <main className={isActive ? `darkmode` : `lightMode time`}>
+            <CanonicalHead/>
               {/* <div 
                 id="lightModeToggle"
                 className={isActive ? `disabled` : `enabled`} 
