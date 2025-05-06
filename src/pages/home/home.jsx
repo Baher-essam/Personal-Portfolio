@@ -1,7 +1,7 @@
 import React, {useState,useEffect, useContext} from 'react'
 import { NavLink } from 'react-router-dom'//for about section button
 /*intro section data */
-import Typewriter from 'typewriter-effect';
+import { Typewriter } from 'react-simple-typewriter';
 import './home.css'
 import bg2 from '../../Assets/images/shape4.gif'
 /*services and projects section data*/
@@ -67,18 +67,18 @@ const Home = () => {
                                 <span>Hi,</span><span>I'm </span><span className='glitch'  data-content={aboutData.name}>{aboutData.name}</span>
                             </h1>
                             <p className="intro-text-changing">
-                                I'm a{' '}
-                                <i>
-                                    <Typewriter
-                                    options={{
-                                        strings: ['Web Developer', 'Web Designer', 'Freelancer'],
-                                        autoStart: true,
-                                        loop: true,
-                                        delay: 75,
-                                        deleteSpeed: 50,
-                                    }}
-                                    />
-                                </i>
+                            I'm a {' '}
+                            <i >
+                                <Typewriter
+                                words={['Web Developer', 'Web Designer', 'Freelancer']}
+                                loop={0} // or use `Infinity` for endless loop
+                                cursor
+                                cursorStyle="|"
+                                typeSpeed={75}
+                                deleteSpeed={50}
+                                delaySpeed={1500}
+                                />
+                            </i>
                             </p>
                             <div className="social">
                                     <ul className="list-unstyled social-data mt-1">   
