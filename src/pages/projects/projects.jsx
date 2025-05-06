@@ -75,9 +75,9 @@ const Projects = () => {
                                         <div className="tech-used mb10">
                                             <p className="mb-0">Used Technologies:</p>
                                             <ul className="list-unstyled mb0">
-                                                {project.tech.map(tech =>(
-                                                    <li className="tech-name">{tech}</li>
-                                                ))}
+                                            {project.tech.map((tech, index) => (
+                                                <li key={index} className="tech-name">{tech}</li>
+                                            ))}
                                             </ul>
                                         </div>
                                         <div className={'project-release project-release-'+project.status}>coming soon</div>
