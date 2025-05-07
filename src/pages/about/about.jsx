@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import CanonicalHead from "../../Components/Helmet"
 import './about.css'
 
 const about = () => {
@@ -8,6 +9,7 @@ const about = () => {
       }, 2500);
     return (
         <main id="singleAboutMe" className="text-center text-white d-flex justify-content-center align-items-center">
+            <CanonicalHead/>
             <div>
                 <h1 className='mb-3'>Page under creation <span><svg version="1.1" id="Capa_1" width="35" height="35" fill='#D7443E' xlinkHref="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 391.837 391.837">
