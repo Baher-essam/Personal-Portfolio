@@ -6,10 +6,10 @@ import sun from '../Assets/badges/sun.svg'
 const LightModeSwitcher = () => {
     const {  cursorChangeHandler } = useContext(MouseContext); //cursor
     //color mode switcher
-    const [isActive, setActive] = useState("false");
-    const ToggleClass = () => {
-    setActive(!isActive); 
-    };
+    // const [isActive, setActive] = useState("false");
+    // const ToggleClass = () => {
+    // setActive(!isActive); 
+    // };
   return (
             <div 
                 id="lightModeToggle" 
