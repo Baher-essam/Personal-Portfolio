@@ -13,7 +13,7 @@ const aboutData = {
         "name" : "Baher Essam",
         "adderss" : "Cairo, Egypt.",
         "phone" : "01146786272",
-        'email': 'contact@baher.essam.com',
+        'email': 'baher.essam@gmail.com',
         "adderssImg" : adderssImg,
         "phoneImg" : phoneImg,
         'emailImg': mail,
@@ -53,7 +53,7 @@ const aboutData = {
                 'id':4,
                 'name': 'mail',
                 "photo" : mail,
-                "url" : "mailto:contact@baher.essam.com"
+                "url" : "mailto:baher.essam@gmail.com"
             }
         ]
 }
