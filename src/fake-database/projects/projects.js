@@ -164,10 +164,10 @@ const projectsData =[
         "image" : project12,
         "tech" : [ 'WordPress'],
         "name" : "Igroup",
-        "status" : "live",
+        "status" : "offline",
         "category" : "freelance",
         "imageAlt" : "Igroup project",
-        "url" : 'https://igroupegypt.com/',
+        "url" : null,
       },
       {       
         "id" : 12,
