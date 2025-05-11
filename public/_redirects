@@ -5,4 +5,8 @@ https://www.baheressam.com/* https://baheressam.com/:splat 301!
 http://baheressam.com/* https://baheressam.com/:splat 301!
 http://www.baheressam.com/* https://baheressam.com/:splat 301!
 
-/* /index.html 200
+# Redirect /index.html to root to avoid duplicate content
+/index.html    /    301
+
+# Let React handle routing for all known paths
+/*             /index.html   200
