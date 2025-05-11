@@ -2,6 +2,7 @@ import React , {useState, useEffect, useContext} from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 import './projects.css'
 import {projectsData} from '../../fake-database/index'
+import noImageFound from '../../Assets/images/no-image.jpg'
 import { MouseContext } from "../../context/mouseContext" //cursor 
 // import { disable } from 'workbox-navigation-preload';
 
@@ -52,7 +53,8 @@ const Projects = () => {
                     {filterdImages.map(project =>(
                         <Col lg={4} md={6} sm={12} className={'project '+ project.category} key={project.id}>
                             <a 
-                                href={project.url}
+                                href={project?.url ? project.url : null }
+                                target="_blank"
                                 rel="noreferrer noopener"
                                 onMouseEnter={() => cursorChangeHandler("hovered")}
                                 onMouseLeave={() => cursorChangeHandler("")}
@@ -60,8 +62,8 @@ const Projects = () => {
                                 <div className="project-deatils text-white">
                                     <div className={'project-img  '+project.status}>
                                         <picture>
-                                            <source srcSet={project.imageO}/>
-                                            <img src={project.image} alt={project.imageAlt} className="img-fluid" width={500} height={180}/>
+                                            <source srcSet={project.imageO ?  project?.imageO: ''}/>
+                                            <img src={project.image ?  project?.image: noImageFound} alt={project.imageAlt} className="img-fluid" width={350} height={234}/>
                                         </picture>
                                     </div>
                                     <div className="project-content">

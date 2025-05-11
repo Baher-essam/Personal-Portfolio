@@ -10,6 +10,8 @@ import project010 from '../../Assets/images/project-11.webp'
 import project011 from '../../Assets/images/project-10.webp'
 import project012 from '../../Assets/images/project-12.webp'
 import project013 from '../../Assets/images/project-13.webp'
+import project014 from '../../Assets/images/project-14.webp'
+import project015 from '../../Assets/images/project-15.webp'
 
 // import projectO1 from '../../Assets/images/project-1.jpg'
 // import projectO3 from '../../Assets/images/project-3.jpg'//not exist
@@ -23,6 +25,8 @@ import project10 from '../../Assets/images/project-11.jpg'
 import project11 from '../../Assets/images/project-10.png'
 import project12 from '../../Assets/images/project-12.png'
 import project13 from '../../Assets/images/project-13.png'
+import project14 from '../../Assets/images/project-14.jpg'
+import project15 from '../../Assets/images/project-15.jpg'
 
 
 const projectsData =[
@@ -97,12 +101,12 @@ const projectsData =[
         "image" : project7,
         "tech" : [ "Html5", "CSS3",'Bootstrap4', "Javascript", 'Jquery', 'php', 'mySQL', 'laravel' ],
         "name" : "Attractive car",
-        "status" : "live",
+        "status" : "offline", //add expired
         "tag" : "allprojects",
         "text" : "this is a project2",
         "category" : "work",
         "imageAlt" : "Attractive-car project",
-        "url" : "https://www.attcar.com/",
+        "url" : null,
       }, 
       {       
         "id" : 7,
@@ -136,12 +140,12 @@ const projectsData =[
         "image" : project10,
         "tech" : [ "Html5", "CSS3",'Bootstrap4', "Javascript" ],
         "name" : "Madz",
-        "status" : "live",
+        "status" : "offline",
         "tag" : "allprojects",
         "text" : "this is a project2",
         "category" : "freelance",
         "imageAlt" : "Madz project",
-        "url" : 'https://madz.agency/',
+        "url" : null,
       }, 
       {       
         "id" : 10,
@@ -174,8 +178,63 @@ const projectsData =[
         "status" : "live",
         "category" : "freelance",
         "imageAlt" : "Dr.ashraf El-kelany project",
-        "url" : 'https://ashrafelkelany.com',
-      }
+        "url" : 'https://ashrafelkelany.netlify.app/',
+      },
+      {       
+        "id" : 13,
+        "imageO" : project014,
+        "image" : project14,
+        "tech" : [ "PHP", "Laravel8", 'mySQL'],
+        "name" : "Dim glass",
+        "status" : "live",
+        "category" : "freelance",
+        "imageAlt" : "Dimglass project",
+        "url" : 'https://dimglass.net/',
+      },
+      {       
+        "id" : 14,
+        "imageO" : project015,
+        "image" : project15,
+        "tech" : [ "Wordpress"],
+        "name" : "scent3",
+        "status" : "live",
+        "category" : "freelance",
+        "imageAlt" : "scent3 project",
+        "url" : 'https://scent3.com/',
+      },
+      {       
+        "id" : 15,
+        "imageO" : null,
+        "image" : null,
+        "tech" : [ "Wordpress"],
+        "name" : "Etax",
+        "status" : "live",
+        "category" : "work",
+        "imageAlt" : "etax",
+        "url" : 'https://etax.com.eg/',
+      },
+      {       
+        "id" : 16,
+        "imageO" : null, // if not found
+        "image" : null,
+        "tech" : [ "Reactjs", "react-bootstrap","PHP", "Laravel8",'mySQL'],
+        "name" : "Case Managment system", // big title
+        "status" : "live",
+        "category" : "work",
+        "imageAlt" : "case managment project",
+        "url" : ''
+      },
+      {       
+        "id" : 17,
+        "imageO" : null, // if not found
+        "image" : null,
+        "tech" : [ "Reactjs", "react-bootstrap","PHP", "Laravel8",'mySQL'],
+        "name" : "Employee portal", // big title
+        "status" : "live",
+        "category" : "work",
+        "imageAlt" : "Employee portal project",
+        "url" : 'https://ess.eta.gov.eg/',
+      },
 
 
 ]
