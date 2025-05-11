@@ -1,4 +1,4 @@
-import React, {useState,useEffect, useContext} from 'react'
+import React, { useContext} from 'react'
 import { NavLink } from 'react-router-dom'//for about section button
 /*intro section data */
 import { Typewriter } from 'react-simple-typewriter';
@@ -17,20 +17,21 @@ import shape3 from '../../Assets/images/shape-3.png'
 import shape1 from '../../Assets/images/shape-1.png'
 import shape2 from '../../Assets/images/shape-7.png'
 import arrow from '../../Assets/badges/arrow.svg'
-import moon from '../../Assets/badges/moon.svg'
-import sun from '../../Assets/badges/sun.svg'
+// import moon from '../../Assets/badges/moon.svg'
+// import sun from '../../Assets/badges/sun.svg'
 
-import LightModeSwitcherComponent from "../../Components/LightModeSwitcher";
+// import LightModeSwitcherComponent from "../../Components/LightModeSwitcher";
 
 
 const Home = () => {
     const {  cursorChangeHandler } = useContext(MouseContext); //cursor
-    const [isActive, setActive] = useState("false");  //color mode switcher
-    const ToggleClass = () => {
-        setActive(!isActive); 
-        };
+    // const [isActive, setActive] = useState("false");  //color mode switcher
+    // const ToggleClass = () => {
+    //     setActive(!isActive); 
+    //     };
     return (
-        <main className={isActive ? `darkmode` : `lightMode time`}>
+        // <main className={isActive ? `darkmode` : `lightMode time`}>
+           <main className="darkmode">
             <CanonicalHead/>
               {/* <div 
                 id="lightModeToggle"
