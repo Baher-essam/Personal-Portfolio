@@ -21,6 +21,7 @@
     "sitemap": "^8.0.0",
     "tailwindcss": "^2.2.19",
     "web-vitals": "^0.2.4",
+    "webpack": "^5.99.8",
     "workbox-background-sync": "^5.1.4",
     "workbox-broadcast-update": "^5.1.4",
     "workbox-cacheable-response": "^5.1.4",
