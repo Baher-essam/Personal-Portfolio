@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index';
 
@@ -20,14 +20,12 @@ function App() {
       <div className="App">
         <CursorComponent/>
         <HeaderComponent/>
-        <Switch>
-              <Route path="/" exact component={Home}/>
-              <Route path="/about" component={About}/>
-              {/* <Route path="/projects" component={Projects}/> */}
-              {/* <Route path="/service" component={Service}/> */}
-              <Route path="/thankyou" component={ThankYou}/>
-              <Route path="*" component={PageNotFound}/>
-            </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/thankyou" element={<ThankYou />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
         <FooterComponent/>
       </div>
     </BrowserRouter>
