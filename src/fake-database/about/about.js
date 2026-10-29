@@ -5,17 +5,13 @@ import introImgwebp from '../../Assets/images/frame2.webp'
 import github from '../../Assets/badges/github.svg'
 import linkedin from '../../Assets/badges/linkedin.svg'
 import mail from '../../Assets/badges/mail.svg'
-import codepen from '../../Assets/badges/codepen.svg'
 import adderssImg from '../../Assets/badges/location.svg'
-import phoneImg from '../../Assets/badges/phone.svg'
 
 const aboutData = {
         "name" : "Baher Essam",
         "adderss" : "Cairo, Egypt.",
-        "phone" : "01146786272",
         'email': 'baher.essam@gmail.com',
         "adderssImg" : adderssImg,
-        "phoneImg" : phoneImg,
         'emailImg': mail,
         'age': 25,
         "job" : [ "Freelancer", "Web Developer" ],
@@ -45,12 +41,6 @@ const aboutData = {
             },
             {
                 'id':3,
-                'name': 'codepen',
-                "photo" : codepen,
-                "url" : "https://codepen.io/Baher-Essam"
-            },
-            {
-                'id':4,
                 'name': 'mail',
                 "photo" : mail,
                 "url" : "mailto:baher.essam@gmail.com"

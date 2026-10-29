@@ -158,11 +158,11 @@ const Home = () => {
                                     <div className="personal">
                                         <ul className='list-unstyled'>
                                             <li className='my-2'>
-                                                <span><img src={aboutData.adderssImg} alt="phone-logo" width={25} height={25}/></span>
+                                                <span><img src={aboutData.adderssImg} alt="address-logo" width={25} height={25}/></span>
                                                 <span className='ms-2'>{aboutData.adderss}</span>
                                             </li>
                                             <li className='my-2'>
-                                                <span><img src={aboutData.emailImg} alt="phone-logo" width={25} height={25}/></span>
+                                                <span><img src={aboutData.emailImg} alt="email-logo" width={25} height={25}/></span>
                                                 <span className='ms-2'>
                                                     <a 
                                                         href={"mailto:"+aboutData.email}
@@ -170,18 +170,6 @@ const Home = () => {
                                                         onMouseLeave={() => cursorChangeHandler("")}
                                                     >
                                                         {aboutData.email}
-                                                    </a>
-                                                </span>
-                                            </li>
-                                            <li className='my-2'>
-                                                <span><img src={aboutData.phoneImg} alt="phone-logo" width={25} height={25}/></span> 
-                                                <span className='ms-2'>
-                                                    <a 
-                                                        href={"tel:"+aboutData.phone}
-                                                        onMouseEnter={() => cursorChangeHandler("hovered")}
-                                                        onMouseLeave={() => cursorChangeHandler("")}
-                                                    >
-                                                        (+20) {aboutData.phone}
                                                     </a>
                                                 </span>
                                             </li>
