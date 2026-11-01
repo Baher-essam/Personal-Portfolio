@@ -13,9 +13,16 @@ const aboutData = {
         'email': 'baher.essam@gmail.com',
         "adderssImg" : adderssImg,
         'emailImg': mail,
-        'age': 25,
+        'age': 30,
         "job" : [ "Freelancer", "Web Developer" ],
-        "skills" : ["Html5", "CSS3",'Bootstrap4','Matrtlize.css','Tailwind css', "Javascript", 'Jquery',  "react-bootstrap", "Reactjs", 'JSX', 'PWA', 'laravel',"WIX / EditorX" , "Wordpress"  ],
+        "skills" : [
+            "Html5",
+            "CSS3",'Bootstrap4',
+            'Tailwind css', 'Javascript', 'Jquery', 
+            "react-bootstrap", 'Reactjs', 
+            'JSX', 'PWA', 
+            'laravel', 'Wordpress'
+        ],
         "photo" : profile,
         "photoWebp" : profileWebp,
         "photoAlt" : 'profile-photo',
